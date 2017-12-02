@@ -25,6 +25,5 @@ Global
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
-<<<<<<< HEAD
-	EndGlobalSection	GlobalSection(MonoDevelopProperties) = preSolution
+	EndGlobalSection
 EndGlobal
