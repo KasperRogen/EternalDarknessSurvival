@@ -11,25 +11,118 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CharacterMovement.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CharacterMovement.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Character/CharacterMovement.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="55" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+            <state relative-caret-position="258">
+              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
-                <marker date="1512221067970" expanded="false" signature="6:78" ph="..." />
-                <marker date="1512221067970" expanded="true" signature="126:1834" ph="{...}" />
-                <marker date="1512221067970" expanded="true" signature="399:604" ph="{...}" />
-                <marker date="1512221067970" expanded="true" signature="658:997" ph="{...}" />
-                <marker date="1512221067970" expanded="true" signature="739:772" ph="{...}" />
-                <marker date="1512221067970" expanded="true" signature="814:842" ph="{...}" />
-                <marker date="1512221067970" expanded="true" signature="849:931" ph="{...}" />
-                <marker date="1512221067970" expanded="true" signature="1021:1124" ph="{...}" />
-                <marker date="1512221067970" expanded="true" signature="1155:1351" ph="{...}" />
-                <marker date="1512221067970" expanded="true" signature="1283:1348" ph="{...}" />
-                <marker date="1512221067970" expanded="true" signature="1379:1602" ph="{...}" />
-                <marker date="1512221067970" expanded="true" signature="1626:1720" ph="{...}" />
-                <marker date="1512221067970" expanded="true" signature="1743:1824" ph="{...}" />
+                <marker date="1512224294730" expanded="false" signature="6:78" ph="..." />
+                <marker date="1512224294730" expanded="true" signature="126:1771" ph="{...}" />
+                <marker date="1512224294730" expanded="true" signature="399:604" ph="{...}" />
+                <marker date="1512224294730" expanded="true" signature="658:934" ph="{...}" />
+                <marker date="1512224294730" expanded="true" signature="739:772" ph="{...}" />
+                <marker date="1512224294730" expanded="true" signature="814:842" ph="{...}" />
+                <marker date="1512224294730" expanded="true" signature="849:931" ph="{...}" />
+                <marker date="1512224294730" expanded="true" signature="958:1061" ph="{...}" />
+                <marker date="1512224294730" expanded="true" signature="1092:1288" ph="{...}" />
+                <marker date="1512224294730" expanded="true" signature="1220:1285" ph="{...}" />
+                <marker date="1512224294730" expanded="true" signature="1316:1539" ph="{...}" />
+                <marker date="1512224294730" expanded="true" signature="1563:1657" ph="{...}" />
+                <marker date="1512224294730" expanded="true" signature="1680:1761" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gatherable.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Gathering/Gatherable.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="53" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="53" />
+              <folding>
+                <marker date="1512224005255" expanded="true" signature="6:92" ph="..." />
+                <marker date="1512224005255" expanded="true" signature="133:571" ph="{...}" />
+                <marker date="1512224005255" expanded="true" signature="260:288" ph="{...}" />
+                <marker date="1512224005255" expanded="true" signature="342:569" ph="{...}" />
+                <marker date="1512224005255" expanded="true" signature="534:566" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PublicEnums.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/PublicEnums.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+              <folding>
+                <marker date="1512225034665" expanded="true" signature="6:78" ph="..." />
+                <marker date="1512225034665" expanded="true" signature="112:184" ph="{...}" />
+                <marker date="1512225034665" expanded="true" signature="142:182" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResourceManager.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Gathering/Character/ResourceManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+              <folding>
+                <marker date="1512225591328" expanded="true" signature="6:78" ph="..." />
+                <marker date="1512225591328" expanded="true" signature="124:525" ph="{...}" />
+                <marker date="1512225591328" expanded="true" signature="201:232" ph="{...}" />
+                <marker date="1512225591328" expanded="true" signature="317:523" ph="{...}" />
+                <marker date="1512225591328" expanded="true" signature="344:520" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CharacterGatherController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Gathering/Character/CharacterGatherController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <folding>
+                <marker date="1512225591339" expanded="false" signature="6:117" ph="..." />
+                <marker date="1512225591339" expanded="true" signature="174:946" ph="{...}" />
+                <marker date="1512225591339" expanded="true" signature="230:298" ph="{...}" />
+                <marker date="1512225591339" expanded="true" signature="266:295" ph="{...}" />
+                <marker date="1512225591339" expanded="true" signature="322:944" ph="{...}" />
+                <marker date="1512225591339" expanded="true" signature="450:941" ph="{...}" />
+                <marker date="1512225591339" expanded="true" signature="611:937" ph="{...}" />
+                <marker date="1512225591339" expanded="true" signature="821:932" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rock.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Gathering/GatherTypes/Rock.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+              <folding>
+                <marker date="1512225034653" expanded="false" signature="6:78" ph="..." />
+                <marker date="1512225034653" expanded="true" signature="111:240" ph="{...}" />
+                <marker date="1512225034653" expanded="true" signature="160:237" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tree.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Gathering/GatherTypes/Tree.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="57" lean-forward="false" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+              <folding>
+                <marker date="1512225034657" expanded="true" signature="31:213" ph="{...}" />
+                <marker date="1512225034657" expanded="true" signature="68:211" ph="{...}" />
+                <marker date="1512225034657" expanded="true" signature="95:205" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -38,13 +131,26 @@
     </leaf>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gathering/Gatherable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gathering/Character/CharacterGatherController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gathering/GatherTypes/Rock.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gathering/Character/ResourceManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/CharacterMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gathering/GatherTypes/Tree.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PublicEnums.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/ClickMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gathering/CharacterGatherController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gathering/Gatherable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PublicEnums.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gathering/GatherTypes/Tree.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gathering/GatherTypes/Rock.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gathering/Character/CharacterGatherController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gathering/Character/ResourceManager.cs" />
       </list>
     </option>
   </component>
@@ -80,6 +186,58 @@
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="EternalDarkessSurvival (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="EternalDarkessSurvival (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="EternalDarkessSurvival (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="EternalDarkessSurvival (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="EternalDarkessSurvival (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Character" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="EternalDarkessSurvival (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Gathering" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="EternalDarkessSurvival (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Gathering" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Character" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="EternalDarkessSurvival (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Gathering" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="GatherTypes" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
           <select />
@@ -117,12 +275,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1512207575718</updated>
-      <workItem from="1512207578856" duration="12670000" />
+      <workItem from="1512207578856" duration="17021000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12670000" />
+    <option name="totallyTimeSpent" value="17021000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -137,26 +295,26 @@
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14821428" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14761905" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,24 +336,113 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Gathering/CharacterGatherController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Character/CharacterMovement.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="55" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+        <state relative-caret-position="258">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
-            <marker date="1512221067970" expanded="false" signature="6:78" ph="..." />
-            <marker date="1512221067970" expanded="true" signature="126:1834" ph="{...}" />
-            <marker date="1512221067970" expanded="true" signature="399:604" ph="{...}" />
-            <marker date="1512221067970" expanded="true" signature="658:997" ph="{...}" />
-            <marker date="1512221067970" expanded="true" signature="739:772" ph="{...}" />
-            <marker date="1512221067970" expanded="true" signature="814:842" ph="{...}" />
-            <marker date="1512221067970" expanded="true" signature="849:931" ph="{...}" />
-            <marker date="1512221067970" expanded="true" signature="1021:1124" ph="{...}" />
-            <marker date="1512221067970" expanded="true" signature="1155:1351" ph="{...}" />
-            <marker date="1512221067970" expanded="true" signature="1283:1348" ph="{...}" />
-            <marker date="1512221067970" expanded="true" signature="1379:1602" ph="{...}" />
-            <marker date="1512221067970" expanded="true" signature="1626:1720" ph="{...}" />
-            <marker date="1512221067970" expanded="true" signature="1743:1824" ph="{...}" />
+            <marker date="1512224294730" expanded="false" signature="6:78" ph="..." />
+            <marker date="1512224294730" expanded="true" signature="126:1771" ph="{...}" />
+            <marker date="1512224294730" expanded="true" signature="399:604" ph="{...}" />
+            <marker date="1512224294730" expanded="true" signature="658:934" ph="{...}" />
+            <marker date="1512224294730" expanded="true" signature="739:772" ph="{...}" />
+            <marker date="1512224294730" expanded="true" signature="814:842" ph="{...}" />
+            <marker date="1512224294730" expanded="true" signature="849:931" ph="{...}" />
+            <marker date="1512224294730" expanded="true" signature="958:1061" ph="{...}" />
+            <marker date="1512224294730" expanded="true" signature="1092:1288" ph="{...}" />
+            <marker date="1512224294730" expanded="true" signature="1220:1285" ph="{...}" />
+            <marker date="1512224294730" expanded="true" signature="1316:1539" ph="{...}" />
+            <marker date="1512224294730" expanded="true" signature="1563:1657" ph="{...}" />
+            <marker date="1512224294730" expanded="true" signature="1680:1761" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Gathering/Gatherable.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="53" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="53" />
+          <folding>
+            <marker date="1512224005255" expanded="true" signature="6:92" ph="..." />
+            <marker date="1512224005255" expanded="true" signature="133:571" ph="{...}" />
+            <marker date="1512224005255" expanded="true" signature="260:288" ph="{...}" />
+            <marker date="1512224005255" expanded="true" signature="342:569" ph="{...}" />
+            <marker date="1512224005255" expanded="true" signature="534:566" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Gathering/GatherTypes/Tree.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="57" lean-forward="false" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+          <folding>
+            <marker date="1512225034657" expanded="true" signature="31:213" ph="{...}" />
+            <marker date="1512225034657" expanded="true" signature="68:211" ph="{...}" />
+            <marker date="1512225034657" expanded="true" signature="95:205" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Gathering/GatherTypes/Rock.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+          <folding>
+            <marker date="1512225034653" expanded="false" signature="6:78" ph="..." />
+            <marker date="1512225034653" expanded="true" signature="111:240" ph="{...}" />
+            <marker date="1512225034653" expanded="true" signature="160:237" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PublicEnums.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <marker date="1512225034665" expanded="true" signature="6:78" ph="..." />
+            <marker date="1512225034665" expanded="true" signature="112:184" ph="{...}" />
+            <marker date="1512225034665" expanded="true" signature="142:182" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Gathering/Character/CharacterGatherController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <marker date="1512225591339" expanded="false" signature="6:117" ph="..." />
+            <marker date="1512225591339" expanded="true" signature="174:946" ph="{...}" />
+            <marker date="1512225591339" expanded="true" signature="230:298" ph="{...}" />
+            <marker date="1512225591339" expanded="true" signature="266:295" ph="{...}" />
+            <marker date="1512225591339" expanded="true" signature="322:944" ph="{...}" />
+            <marker date="1512225591339" expanded="true" signature="450:941" ph="{...}" />
+            <marker date="1512225591339" expanded="true" signature="611:937" ph="{...}" />
+            <marker date="1512225591339" expanded="true" signature="821:932" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Gathering/Character/ResourceManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <marker date="1512225591328" expanded="true" signature="6:78" ph="..." />
+            <marker date="1512225591328" expanded="true" signature="124:525" ph="{...}" />
+            <marker date="1512225591328" expanded="true" signature="201:232" ph="{...}" />
+            <marker date="1512225591328" expanded="true" signature="317:523" ph="{...}" />
+            <marker date="1512225591328" expanded="true" signature="344:520" ph="{...}" />
           </folding>
         </state>
       </provider>

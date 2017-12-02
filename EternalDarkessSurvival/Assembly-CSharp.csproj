@@ -52,6 +52,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Character\CharacterMovement.cs" />
+     <Compile Include="Assets\Scripts\Gathering\Character\CharacterGatherController.cs" />
+     <Compile Include="Assets\Scripts\Gathering\Character\ResourceManager.cs" />
+     <Compile Include="Assets\Scripts\Gathering\Gatherable.cs" />
+     <Compile Include="Assets\Scripts\Gathering\GatherTypes\Rock.cs" />
+     <Compile Include="Assets\Scripts\Gathering\GatherTypes\Tree.cs" />
+     <Compile Include="Assets\Scripts\PublicEnums.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>/Users/Casper/Library/Projects/Unity/EternalDarknessSurvival/EternalDarkessSurvival/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>

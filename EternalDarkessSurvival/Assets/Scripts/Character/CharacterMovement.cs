@@ -32,7 +32,7 @@ public class CharacterMovement : MonoBehaviour
 		// Rotate rigidbody
 		LookAtMousePos();
 
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonDown(1))
 		{
 			OnMouseClickRecord();
 		}
@@ -46,8 +46,6 @@ public class CharacterMovement : MonoBehaviour
 			distanceToMouseClickedPoint = 0;
 			rigidbody.velocity = Vector3.zero;
 		}
-		
-		Debug.DrawLine(transform.position, mousePositionInWorld);
 	}
 
 	void LookAtMousePos()

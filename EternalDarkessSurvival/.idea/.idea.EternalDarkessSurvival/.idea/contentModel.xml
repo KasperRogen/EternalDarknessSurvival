@@ -9,6 +9,18 @@
           <e p="Character" t="Include">
             <e p="CharacterMovement.cs" t="Include" />
           </e>
+          <e p="Gathering" t="Include">
+            <e p="Character" t="Include">
+              <e p="CharacterGatherController.cs" t="Include" />
+              <e p="ResourceManager.cs" t="Include" />
+            </e>
+            <e p="Gatherable.cs" t="Include" />
+            <e p="GatherTypes" t="Include">
+              <e p="Rock.cs" t="Include" />
+              <e p="Tree.cs" t="Include" />
+            </e>
+          </e>
+          <e p="PublicEnums.cs" t="Include" />
         </e>
       </e>
       <e p="EternalDarkessSurvival.sln" t="IncludeFlat" />
