@@ -1,9 +1,9 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EternalDarkessSurvival", "Assembly-CSharp.csproj", "{5DFC7B2A-CC5F-BD8D-924C-DEF6E9A8CD59}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{5DFC7B2A-CC5F-BD8D-924C-DEF6E9A8CD59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EternalDarkessSurvival", "Assembly-CSharp-Editor-firstpass.csproj", "{6D6EAA50-0B5D-EB6B-1B62-CBC30736FA1B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{6D6EAA50-0B5D-EB6B-1B62-CBC30736FA1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
