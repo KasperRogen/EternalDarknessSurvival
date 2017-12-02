@@ -106,9 +106,9 @@ MeshCollider:
   m_GameObject: {fileID: 1180345256288486}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Convex: 0
+  m_Convex: 1
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 3097ed9b3abf749f48c8b2c7311e4853, type: 3}
