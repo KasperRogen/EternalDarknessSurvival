@@ -39,12 +39,12 @@ public class ClickMovement : MonoBehaviour
 		rigidBody.rotation = Quaternion.Euler(0, Mathf.Atan2(mousePointPosition.x, mousePointPosition.z) * Mathf.Rad2Deg - 90, 0);
 		
 		// Check if mouse has been clicked => Move towards position
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonDown(1))
 		{
 			GetMouseClickPosition();
 		}
 
-		if (distanceToMove > .7f)
+		if (distanceToMove > 1.7f)
 		{
 			moveCharacter();
 		}
