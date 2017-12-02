@@ -448,7 +448,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &313561712
 Transform:
@@ -531,7 +531,7 @@ GameObject:
   - component: {fileID: 346687860}
   - component: {fileID: 346687859}
   - component: {fileID: 346687858}
-  - component: {fileID: 346687861}
+  - component: {fileID: 346687859}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -599,7 +599,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 346687853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.69, y: 0.541, z: -5.43}
+  m_LocalPosition: {x: 0.54, y: 0.541, z: -5.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -752,6 +752,7 @@ GameObject:
   - component: {fileID: 406391240}
   - component: {fileID: 406391239}
   - component: {fileID: 406391238}
+  - component: {fileID: 406391242}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -821,6 +822,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 33.552002, y: 0, z: 0}
+--- !u!114 &406391242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 406391237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b2e2f3040a2f1b4893369dff244532c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransparentMaterial: {fileID: 2100000, guid: 16f6025069d58234e801a93d883cae88, type: 2}
+  wall: {fileID: 1561531886342110, guid: 8bd60ec907ad6374e9800a71d248decd, type: 2}
+  BuildCheckMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1 &427150080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,7 +1198,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &783445001
 Transform:
@@ -1268,7 +1285,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!54 &896697129
 Rigidbody:
@@ -1668,7 +1685,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1222226196
 Transform:
@@ -1843,9 +1860,9 @@ GameObject:
   - component: {fileID: 1254446229}
   - component: {fileID: 1254446228}
   - component: {fileID: 1254446227}
-  m_Layer: 0
-  m_Name: Plane
-  m_TagString: Untagged
+  m_Layer: 8
+  m_Name: Floor
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8

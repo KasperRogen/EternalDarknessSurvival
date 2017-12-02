@@ -33,7 +33,7 @@ public class ClickMovement : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 		// Rotate at mouse position
 		GetMousePositionSpace();
 		rigidBody.rotation = Quaternion.Euler(0, Mathf.Atan2(mousePointPosition.x, mousePointPosition.z) * Mathf.Rad2Deg - 90, 0);
@@ -79,7 +79,6 @@ public class ClickMovement : MonoBehaviour
 
 	private void GetMouseClickPosition()
 	{
-		mouseClickedVector = new Vector3((mousePointPosition - transform.position).normalized.x, 0, (mousePointPosition - transform.position).normalized.z);
 		mousePointRecorded = mousePointPosition;
 		GetUpdatedDistanceToMove();
 		Debug.DrawLine(transform.position, mousePointRecorded);
@@ -88,6 +87,7 @@ public class ClickMovement : MonoBehaviour
 	private void moveCharacter()
 	{
 		GetUpdatedDistanceToMove();
-		rigidBody.velocity = mouseClickedVector * MoveSpeed;
+	    mouseClickedVector = new Vector3((mousePointRecorded - transform.position).normalized.x, 0, (mousePointRecorded - transform.position).normalized.z);
+        rigidBody.velocity = mouseClickedVector * MoveSpeed;
 	}
 }
