@@ -53,8 +53,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Character\ClickMovement.cs" />
+    <Compile Include="Assets\Scripts\FollowLightScript.cs" />
+    <Reference Include="Facebook.Unity">
+      <HintPath>/Users/Casper/Library/Projects/Unity/EternalDarknessSurvival/EternalDarkessSurvival/Library/FacebookSDK/Facebook.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.Unity.Arcade">
+      <HintPath>/Users/Casper/Library/Projects/Unity/EternalDarknessSurvival/EternalDarkessSurvival/Library/FacebookSDK/Facebook.Unity.Arcade.dll</HintPath>
+    </Reference>
     <Reference Include="Facebook.Unity.Settings">
       <HintPath>/Users/Casper/Library/Projects/Unity/EternalDarknessSurvival/EternalDarkessSurvival/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="FacebookNamedPipeClient">
+      <HintPath>/Users/Casper/Library/Projects/Unity/EternalDarknessSurvival/EternalDarkessSurvival/Library/FacebookSDK/FacebookNamedPipeClient.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

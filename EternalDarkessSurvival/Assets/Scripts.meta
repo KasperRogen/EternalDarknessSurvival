@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c31316ab226c341ba815e76f6f6be2fc
 folderAsset: yes
 timeCreated: 1512207463
+=======
+guid: c6cf29c0fbca81a429390f53347b57e4
+folderAsset: yes
+timeCreated: 1512211216
+>>>>>>> zombie
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
