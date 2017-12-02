@@ -1,44 +1,21 @@
 fileFormatVersion: 2
-guid: c1f5df566dc2549f890674ead34aef89
-timeCreated: 1512230750
+guid: c4129b51efd3b4825885e068e3c423ae
+timeCreated: 1512237251
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Cube
-    100002: Cube_002
-    100004: Cube_003
-    100006: Cube_004
-    100008: //RootNode
-    400000: Cube
-    400002: Cube_002
-    400004: Cube_003
-    400006: Cube_004
-    400008: //RootNode
-    2300000: Cube
-    2300002: Cube_002
-    2300004: Cube_003
-    2300006: Cube_004
-    3300000: Cube
-    3300002: Cube_002
-    3300004: Cube_003
-    3300006: Cube_004
-    4300000: Cube_004
-    4300002: Cube_003
-    4300004: Cube_002
-    4300006: Cube
-    6400000: Cube
-    6400002: Cube_002
-    6400004: Cube_003
-    6400006: Cube_004
-    7400000: Default Take
-    9500000: //RootNode
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Rocks
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: unnamed
-    second: {fileID: 2100000, guid: dc66a6d32786b4601ac0c93890e93d00, type: 2}
+      name: No Name
+    second: {fileID: 2100000, guid: 7e0fd0bb7911e467abafcbf79d75ea13, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -69,8 +46,8 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 3
-    addColliders: 1
+    meshCompression: 0
+    addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -79,7 +56,7 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
-    keepQuads: 1
+    keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
@@ -88,7 +65,7 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1
@@ -110,7 +87,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
