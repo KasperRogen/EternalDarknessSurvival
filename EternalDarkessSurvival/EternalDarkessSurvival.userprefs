@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{ED2CC2E8-2B48-AF5A-E79A-DD5AF41AD9AD}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Character/ClickMovement.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Character/ClickMovement.cs" Line="17" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.EternalDarkessSurvival PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
