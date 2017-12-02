@@ -56,12 +56,6 @@
     <Reference Include="Facebook.Unity">
       <HintPath>/Users/Casper/Library/Projects/Unity/EternalDarknessSurvival/EternalDarkessSurvival/Library/FacebookSDK/Facebook.Unity.dll</HintPath>
     </Reference>
-    <Reference Include="Facebook.Unity.Arcade">
-      <HintPath>/Users/Casper/Library/Projects/Unity/EternalDarknessSurvival/EternalDarkessSurvival/Library/FacebookSDK/Facebook.Unity.Arcade.dll</HintPath>
-    </Reference>
-    <Reference Include="Facebook.Unity.Settings">
-      <HintPath>/Users/Casper/Library/Projects/Unity/EternalDarknessSurvival/EternalDarkessSurvival/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
-    </Reference>
     <Reference Include="FacebookNamedPipeClient">
       <HintPath>/Users/Casper/Library/Projects/Unity/EternalDarknessSurvival/EternalDarkessSurvival/Library/FacebookSDK/FacebookNamedPipeClient.dll</HintPath>
     </Reference>
