@@ -63,7 +63,7 @@ public class BuildingManager : MonoBehaviour
             _buildable.gameObject.AddComponent<Rigidbody>();
             _buildable.gameObject.GetComponent<Rigidbody>().useGravity = false;
             InitBuildable(_buildable);
-            layerMask = LayerMask.GetMask("Floor");
+            layerMask = LayerMask.GetMask("Terrain");
             _firstRun = false;
         }
 
