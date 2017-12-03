@@ -21,7 +21,7 @@ public class MapGenerator : MonoBehaviour {
 		initSegments();
 		for(int i = 0; i < SegmentWidthCount-1; i++){
 			for(int j = 0; j < SegmentHeightCount-1; j++){
-				TerrainGenerater.GenerateTerrain(new Vector3(Segments[i,j].X, 0, Segments[i,j].Y), (int)SegmentWidth, (int)SegmentHeight, GenerateTerrainFromNoise.TerrainType.trees);
+				TerrainGenerater.GenerateTerrain(new Vector3(Segments[i,j].X, 0, Segments[i,j].Y), (int)SegmentWidth, (int)SegmentHeight, PublicEnums.TerrainType.Tree);
 			}
 		}
 	}

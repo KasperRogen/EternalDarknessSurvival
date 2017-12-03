@@ -12,4 +12,13 @@ public static class PublicEnums {
         Stone,
         Wood
     }
+
+    public enum TerrainType
+    {
+        Tree,
+        Stone,
+        Empty,
+        Spawn,
+        Mountain
+    }
 }

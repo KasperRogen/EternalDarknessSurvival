@@ -7,12 +7,7 @@ public class GenerateTerrainFromNoise : MonoBehaviour
 {
 
     public GameObject tree;
-    
-    public enum TerrainType
-    {
-        trees,
-        stone
-    }
+
 
 
 	// Use this for initialization
@@ -29,7 +24,7 @@ public class GenerateTerrainFromNoise : MonoBehaviour
 
 
 
-    public void GenerateTerrain(Vector3 center, int width, int height, TerrainType type)
+    public void GenerateTerrain(Vector3 center, int width, int height, PublicEnums.TerrainType type)
     {
         Vector3 startPos = new Vector3(center.x - width / 2, center.y, center.z - height / 2);
 
@@ -37,7 +32,7 @@ public class GenerateTerrainFromNoise : MonoBehaviour
         {
             for (float z = (int)startPos.z; z < (int)startPos.z + height; z++)
             {
-                double noise = Mathf.PerlinNoise(x.Remap(0f,width,0f,1f), z.Remap(0f,height,0f,1f));
+                double noise = Mathf.PerlinNoise(x.Remap(0f,width,0f,100f), z.Remap(0f,height,0f,100f));
                 float distFromCenter = (float)(center - new Vector3(x, 0, z)).magnitude;
                 distFromCenter = distFromCenter.Remap(0f, 50f, 0f, 1f);
                 float rand = Random.Range(0, 20);
