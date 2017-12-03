@@ -22,7 +22,7 @@ public class CharacterGatherController : MonoBehaviour {
 		{
 			float distanceToResource = (rayHit.transform.position - transform.position).magnitude;
 			//Debug.Log(distanceToResource);
-			if (distanceToResource < 1.7)
+			if (distanceToResource < 2)
 			{
 				Debug.DrawLine(transform.position, rayHit.transform.position);
 				Debug.Log(rayHit.GetType());
@@ -30,7 +30,7 @@ public class CharacterGatherController : MonoBehaviour {
 				if (gatherObject != null)
 				{
 					// Gatherable object found and clicked on! Do shit.
-					gatherObject.Gather(10, gameObject);
+					gatherObject.Gather(9, gameObject);
 				}
 			}
 		}

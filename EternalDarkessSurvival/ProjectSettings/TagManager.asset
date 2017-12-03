@@ -4,6 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Draggable
   - Light
   - Floor
   - Terrain
@@ -16,8 +17,8 @@ TagManager:
   - UI
   - 
   - 
-  - Floor
-  - Construction
+  - Terrain
+  - 
   - 
   - 
   - 

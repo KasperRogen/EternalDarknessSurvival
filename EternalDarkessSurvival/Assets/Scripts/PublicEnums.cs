@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public static class PublicEnums {
+    public enum ItemType {
+    Stone,
+    Wood
+    }
     public enum ResourceType
     {
         Stone,
