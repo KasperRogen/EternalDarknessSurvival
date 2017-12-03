@@ -81,14 +81,14 @@ public class BuildingManager : MonoBehaviour
         
 
 
-        _buildable.transform.Rotate(new Vector3(transform.rotation.x, Input.GetAxis("Mouse ScrollWheel") * 30, 0));
+        _buildable.transform.Rotate(new Vector3(transform.rotation.x, Input.GetAxis("Mouse ScrollWheel") * 45, 0));
 
         
         
         if (Input.GetMouseButtonDown(0))
         {
             _buildable.GetComponent<NavMeshObstacle>().enabled = true;
-            StartCoroutine(TrumpIt(Buildable));
+            StartCoroutine(BuildObject(Buildable));
         }
 
 
@@ -98,15 +98,38 @@ public class BuildingManager : MonoBehaviour
 
 
 
-    IEnumerator TrumpIt(GameObject Buildable)
+    IEnumerator BuildObject(GameObject Buildable)
     {
         yield return new WaitForEndOfFrame();
         yield return new WaitForEndOfFrame();
         if (CalculateNewPath() && ColliderCheck())
         {
-            PlaceBuildable(_buildable);
-            _buildable = Instantiate(Buildable, Vector3.zero, Quaternion.identity);
-            InitBuildable(_buildable);
+            int woodCount = 0;
+            int stoneCount = 0;
+
+            if (Player.GetComponent<Inventory>().Items.Any(i => i.ItemType == PublicEnums.ItemType.Wood))
+            {
+                woodCount = Player.GetComponent<Inventory>().Items.Where(i => i.ItemType == PublicEnums.ItemType.Wood)
+                    .Sum(i => i.Quantity);
+            }
+
+            if (Player.GetComponent<Inventory>().Items.Any(i => i.ItemType == PublicEnums.ItemType.Stone))
+            {
+                stoneCount = Player.GetComponent<Inventory>().Items.Where(i => i.ItemType == PublicEnums.ItemType.Stone)
+                    .Sum(i => i.Quantity);
+            }
+
+            if (stoneCount >= Buildable.GetComponent<DeployableStats>().StonePrice &&
+                woodCount >= Buildable.GetComponent<DeployableStats>().WoodPrice)
+            {
+                PlaceBuildable(_buildable);
+                _buildable = Instantiate(Buildable, Vector3.zero, Quaternion.identity);
+                InitBuildable(_buildable);
+                Player.GetComponent<Inventory>().DecrementResource(PublicEnums.ItemType.Wood, Buildable.GetComponent<DeployableStats>().WoodPrice);
+                Player.GetComponent<Inventory>().DecrementResource(PublicEnums.ItemType.Stone, Buildable.GetComponent<DeployableStats>().StonePrice);
+            }
+
+            //Buildable.GetComponent<DeployableStats>()
         }
         _buildable.GetComponent<NavMeshObstacle>().enabled = false;
     }
@@ -119,13 +142,11 @@ public class BuildingManager : MonoBehaviour
         print("New path calculated");
         if (NavMeshPath.status != NavMeshPathStatus.PathComplete)
         {
-            Debug.Log("No path!");
             return false;
         }
         else
         {
             return true;
-            Debug.Log("PATH!");
         }
     }
 

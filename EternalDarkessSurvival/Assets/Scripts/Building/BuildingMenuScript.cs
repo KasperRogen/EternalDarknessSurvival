@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,13 +19,14 @@ public class BuildingMenuScript : MonoBehaviour {
 	    foreach (CustomButton customButton in buttons)
 	    {
 	        Vector3 positionvector = ButtonTemplate.GetComponent<RectTransform>().position;
-	        positionvector.y -= ButtonTemplate.GetComponent<RectTransform>().rect.height / 3;
+	        positionvector.y -= ButtonTemplate.GetComponent<RectTransform>().rect.height;
 
-            GameObject button = Instantiate(ButtonTemplate,
-	             positionvector, Quaternion.identity,
-	            GameObject.Find("BuildingMenuCanvas").transform);
+	        GameObject button = Instantiate(ButtonTemplate,
+	            GameObject.Find("BuildingMenuCanvas").transform.GetChild(0).transform, false);
 
-	        float _childYIndex = 0;
+	        button.transform.position = positionvector;
+
+            float _childYIndex = 0;
 	        button.AddComponent<ButtonScript>().message = customButton;
 	        button.GetComponent<ButtonScript>().BMS = this;
 	        customButton.GO = button;
@@ -36,8 +34,8 @@ public class BuildingMenuScript : MonoBehaviour {
             foreach (CustomButton child in customButton.Children)
 	        {
 	            Vector3 childPosition = button.GetComponent<RectTransform>().position;
-	            childPosition.x += (button.GetComponent<RectTransform>().rect.width) / 3;
-	            childPosition.y -= (button.GetComponent<RectTransform>().rect.height * _childYIndex++) / 3;
+	            childPosition.x += (button.GetComponent<RectTransform>().rect.width);
+	            childPosition.y -= (button.GetComponent<RectTransform>().rect.height * _childYIndex++);
 	            customButton.childrenGOS.Add(InitializeButtons(childPosition, child, button.transform, child.Level));
             }
 	    }
@@ -56,7 +54,28 @@ public class BuildingMenuScript : MonoBehaviour {
         GameObject button = Instantiate(ButtonTemplate,
             position, Quaternion.identity,
             parent);
-        button.transform.GetChild(0).GetComponent<Text>().text = customButton.Name;
+
+        Text txt = button.transform.GetChild(0).GetComponent<Text>();
+
+        txt.text = customButton.Name;
+        
+
+        if (customButton.ToPlace != null && customButton.ToPlace.GetComponent<DeployableStats>() != null)
+        {
+            Debug.Log(customButton.Name);
+            if (customButton.ToPlace.GetComponent<DeployableStats>().WoodPrice != 0)
+            {
+                txt.text += "\nWood: " + customButton.ToPlace.GetComponent<DeployableStats>().WoodPrice;
+            }
+
+            if (customButton.ToPlace.GetComponent<DeployableStats>().StonePrice != 0)
+            {
+                txt.text += "\nStone: " + customButton.ToPlace.GetComponent<DeployableStats>().StonePrice;
+            }
+        }
+
+
+
         button.name = customButton.Name;
         customButton.Parent = parent;
         customButton.Level = parentLevel + 1;
@@ -74,8 +93,8 @@ public class BuildingMenuScript : MonoBehaviour {
                 foreach (CustomButton child in customButton.Children)
                 {
                     Vector3 childPosition = button.GetComponent<RectTransform>().position;
-                    childPosition.x += (button.GetComponent<RectTransform>().rect.width) / 3;
-                    childPosition.y -= (button.GetComponent<RectTransform>().rect.height * _childYIndex++) / 3;
+                    childPosition.x += (button.GetComponent<RectTransform>().rect.width);
+                    childPosition.y -= (button.GetComponent<RectTransform>().rect.height * _childYIndex++);
                     customButton.childrenGOS.Add(InitializeButtons(childPosition, child, button.transform, parentLevel + 1));
             }
         }

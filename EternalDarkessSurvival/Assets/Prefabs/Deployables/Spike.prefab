@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23051763721831510}
   - component: {fileID: 208620081791793760}
   - component: {fileID: 65017275647698028}
+  - component: {fileID: 114004995555198516}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Untagged
@@ -96,6 +97,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.9999999, z: 1.0000001}
   m_Center: {x: 0.00000005960464, y: 0, z: -0.00000008940696}
+--- !u!114 &114004995555198516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1275222135803756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4580033cc841c34fa2ae23520fffab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WoodPrice: 15
+  StonePrice: 0
 --- !u!208 &208620081791793760
 NavMeshObstacle:
   m_ObjectHideFlags: 1
