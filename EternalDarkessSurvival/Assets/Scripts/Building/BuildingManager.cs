@@ -87,6 +87,7 @@ public class BuildingManager : MonoBehaviour
         
         if (Input.GetMouseButtonDown(0))
         {
+            if(_buildable.GetComponent<NavMeshObstacle>() != null)
             _buildable.GetComponent<NavMeshObstacle>().enabled = true;
             StartCoroutine(BuildObject(Buildable));
         }
@@ -135,7 +136,9 @@ public class BuildingManager : MonoBehaviour
 
             //Buildable.GetComponent<DeployableStats>()
         }
-        _buildable.GetComponent<NavMeshObstacle>().enabled = false;
+
+        if (_buildable.GetComponent<NavMeshObstacle>() != null)
+            _buildable.GetComponent<NavMeshObstacle>().enabled = false;
     }
 
 
@@ -192,7 +195,9 @@ public class BuildingManager : MonoBehaviour
     void InitBuildable(GameObject GO)
     {
         GO.GetComponent<Renderer>().material = TransparentMaterial;
-        GO.GetComponent<NavMeshObstacle>().enabled = false;
+
+        if (GO.GetComponent<NavMeshObstacle>() != null)
+            GO.GetComponent<NavMeshObstacle>().enabled = false;
         GO.GetComponent<Collider>().isTrigger = true;
         GO.AddComponent<Rigidbody>();
         GO.GetComponent<Rigidbody>().useGravity = false;
@@ -204,7 +209,8 @@ public class BuildingManager : MonoBehaviour
     {
         GO.GetComponent<Renderer>().material = _objectMat;
         GO.GetComponent<Collider>().isTrigger = false;
-        GO.GetComponent<NavMeshObstacle>().enabled = true;
+        if (GO.GetComponent<NavMeshObstacle>() != null)
+            GO.GetComponent<NavMeshObstacle>().enabled = true;
         Destroy(GO.GetComponent<Rigidbody>());
         GO.layer = 9;
     }

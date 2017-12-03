@@ -6,14 +6,30 @@ using UnityEngine.Assertions.Must;
 public class GenerateTerrainFromNoise : MonoBehaviour
 {
 
-    public GameObject tree;
-
+    public GameObject[] Trees;
+    public GameObject[] Stones;
 
 
 	// Use this for initialization
 	void Start () {
+	        int grassDensity = 800;
+	        int patchDetail = 0;
+	        Terrain terrainToPopulate = transform.gameObject.GetComponent<Terrain>();
+	        terrainToPopulate.terrainData.SetDetailResolution(grassDensity, patchDetail);
 
-	}
+	        int[,] newMap = new int[grassDensity, grassDensity];
+
+	        for (int i = 0; i < grassDensity; i++)
+	        {
+	            for (int j = 0; j < grassDensity; j++)
+	            {
+	                    newMap[i, j] = 6;
+	            }
+	        }
+	        terrainToPopulate.terrainData.SetDetailLayer(0, 0, 0, newMap);
+
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -42,7 +58,11 @@ public class GenerateTerrainFromNoise : MonoBehaviour
                     Quaternion rot = Random.rotation;
                     rot.x = 0;
                     rot.z = 0; 
-                    Instantiate(tree, new Vector3(x, 2, z), rot);
+
+                    if(type == PublicEnums.TerrainType.Tree)
+                        Instantiate(Trees[Random.Range(0,Trees.Length-1)], new Vector3(x, 2, z), rot);
+                    else if(type == PublicEnums.TerrainType.Stone)
+                        Instantiate(Stones[Random.Range(0, Stones.Length - 1)], new Vector3(x, 2, z), rot);
                 }
             }
         }

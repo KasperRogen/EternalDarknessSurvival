@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 33073197980728430}
   - component: {fileID: 136713069293891468}
   - component: {fileID: 23601691819351254}
+  - component: {fileID: 114130635468900078}
   m_Layer: 0
   m_Name: Torch
   m_TagString: Untagged
@@ -54,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1383144751258692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.32, y: 0.57, z: -0.08}
+  m_LocalPosition: {x: 3.3139954, y: 0.1916, z: 5.2652435}
   m_LocalScale: {x: 0.049999997, y: 0.099999994, z: 0.049999997}
   m_Children:
   - {fileID: 4483484374910592}
@@ -68,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1010012610538740}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 1.2, z: 0}
+  m_LocalPosition: {x: 0, y: 11.84, z: 0}
   m_LocalScale: {x: 20, y: 15.868241, z: 14.13176}
   m_Children: []
   m_Father: {fileID: 4039500822200134}
@@ -122,7 +123,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1010012610538740}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3025c47cf0dfca744a23173222a43850, type: 2}
   m_CullingMode: 0
@@ -143,7 +144,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.78676474, g: 0.43950307, b: 0, a: 1}
   m_Intensity: 2
-  m_Range: 7.4
+  m_Range: 4.64
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -168,6 +169,19 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114130635468900078
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1383144751258692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4580033cc841c34fa2ae23520fffab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WoodPrice: 10
+  StonePrice: 0
 --- !u!135 &135058075510635218
 SphereCollider:
   m_ObjectHideFlags: 1

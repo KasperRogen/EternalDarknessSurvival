@@ -672,7 +672,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1568246981667034}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.6900024, y: 0.54100037, z: -5.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -701,7 +701,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1479852484210156}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6380024, y: -0.06400037, z: 3.027}
+  m_LocalPosition: {x: -0.002, y: 0.362, z: 0.644}
   m_LocalScale: {x: 0.049999997, y: 0.099999994, z: 0.049999997}
   m_Children:
   - {fileID: 4475142279854920}
@@ -830,7 +830,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.78676474, g: 0.43950307, b: 0, a: 1}
   m_Intensity: 2
-  m_Range: 7.4
+  m_Range: 10.52
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -1281,6 +1281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0884ce0df497640fdae643a45e32473d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MiningDistance: 2.5
 --- !u!114 &114259573109191500
 MonoBehaviour:
   m_ObjectHideFlags: 1
