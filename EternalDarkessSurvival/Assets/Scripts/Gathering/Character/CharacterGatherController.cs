@@ -21,7 +21,7 @@ public class CharacterGatherController : MonoBehaviour {
 		if (Physics.Raycast(ray, out rayHit))
 		{
 			float distanceToResource = (rayHit.transform.position - transform.position).magnitude;
-			Debug.Log(distanceToResource);
+			//Debug.Log(distanceToResource);
 			if (distanceToResource < 1.7)
 			{
 				Debug.DrawLine(transform.position, rayHit.transform.position);
