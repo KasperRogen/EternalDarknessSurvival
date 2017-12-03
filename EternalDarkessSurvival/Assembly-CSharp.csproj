@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\Inventory\ItemInfo.cs" />
      <Compile Include="Assets\Scripts\Mobs\MobMovementScript.cs" />
      <Compile Include="Assets\Scripts\PublicEnums.cs" />
+     <Compile Include="Assets\Scripts\World\GenerateTerrainFromNoise.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>C:/Users/Kasper/Documents/EternalDarknessSurvival/EternalDarkessSurvival/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
