@@ -109,7 +109,7 @@ public class BuildingMenuScript : MonoBehaviour {
         {
             for (int i = 0; i < toClose.Children.Count; i++)
             {
-                Debug.Log("Closing: " + toClose.Name + " Avoiding: " + buttonToAvoid.Name + " From level: " + startFromLevel + " | looking at: " + toClose.Children[i].Name + " With level: " + toClose.Children[i].Level);
+                //Debug.Log("Closing: " + toClose.Name + " Avoiding: " + buttonToAvoid.Name + " From level: " + startFromLevel + " | looking at: " + toClose.Children[i].Name + " With level: " + toClose.Children[i].Level);
                 if (toClose.Children[i].Name != buttonToAvoid.Name && toClose.Children[i].Level > startFromLevel &&
                     toClose.Children[i].Parent != buttonToAvoid.GO.transform)
                 {
