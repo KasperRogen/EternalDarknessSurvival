@@ -40,7 +40,7 @@ public class Inventory : MonoBehaviour {
 	public void DropItem(Item item){
 		DropPrefab.GetComponent<Gatherable>().resourceCount = item.Quantity;
 		DropPrefab.GetComponent<Gatherable>().resourceType = item.ItemType;
-		Instantiate(DropPrefab, transform.position, transform.rotation);
+		Instantiate(DropPrefab, transform.position + Vector3.forward, transform.rotation);
 	}
 
 	// Add ResourceItems
