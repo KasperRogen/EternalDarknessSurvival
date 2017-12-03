@@ -524,12 +524,12 @@ Prefab:
     - target: {fileID: 224889504391276612, guid: 74bb904e799bf8a4fb9db6cb54825cd2,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 249.19
+      value: 219.69
       objectReference: {fileID: 0}
     - target: {fileID: 224889504391276612, guid: 74bb904e799bf8a4fb9db6cb54825cd2,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 137.959
+      value: 121.459
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 74bb904e799bf8a4fb9db6cb54825cd2, type: 2}
@@ -781,8 +781,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1067300965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 246.5, y: 138.5, z: 0}
-  m_LocalScale: {x: 0.25648147, y: 0.25648147, z: 0.25648147}
+  m_LocalPosition: {x: 217, y: 122, z: 0}
+  m_LocalScale: {x: 0.22592591, y: 0.22592591, z: 0.22592591}
   m_Children:
   - {fileID: 1240704889}
   m_Father: {fileID: 0}
@@ -984,6 +984,49 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1240704888}
+--- !u!1 &1390202957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1390202959}
+  - component: {fileID: 1390202958}
+  m_Layer: 0
+  m_Name: MapGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1390202958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390202957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c2d274ce6cf4b458d0b0d72d3dedaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TerrainGenerater: {fileID: 2089559034}
+  MapWidth: 400
+  MapHeight: 400
+--- !u!4 &1390202959
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390202957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.998643, y: 3.9200974, z: 17.048822}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1916144026
 GameObject:
   m_ObjectHideFlags: 0

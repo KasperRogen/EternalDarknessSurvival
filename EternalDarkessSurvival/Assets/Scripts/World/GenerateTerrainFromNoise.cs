@@ -17,7 +17,7 @@ public class GenerateTerrainFromNoise : MonoBehaviour
 
 	// Use this for initialization
 	void Start () {
-        GenerateTerrain(Vector3.zero, 50, 50, TerrainType.trees);
+
 	}
 	
 	// Update is called once per frame
