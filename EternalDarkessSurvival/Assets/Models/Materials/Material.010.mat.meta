@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 52593c5d7c66a4dca88a4071df024ae3
 timeCreated: 1512242226
+=======
+guid: c1f27616682ba9744951baa20f24d892
+timeCreated: 1512251611
+>>>>>>> BuildingMenu
 licenseType: Free
 NativeFormatImporter:
   externalObjects: {}

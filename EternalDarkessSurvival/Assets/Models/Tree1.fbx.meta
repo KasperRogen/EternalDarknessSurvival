@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: f5cf7b5f4459f41efa42e854d2c99687
-timeCreated: 1512242226
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -10,6 +8,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Tree1
+    9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -70,7 +69,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.011
-    second: {fileID: 2100000, guid: 408b1317014114ff192c28c6b155cec7, type: 2}
+    second: {fileID: 2100000, guid: 77260b00098c7b745a65529725081cf1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -147,7 +146,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
