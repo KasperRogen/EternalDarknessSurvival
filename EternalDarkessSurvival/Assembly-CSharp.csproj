@@ -55,10 +55,13 @@
      <Compile Include="Assets\Scripts\Character\ClickMovement.cs" />
      <Compile Include="Assets\Scripts\FollowLightScript.cs" />
      <Compile Include="Assets\Scripts\Gathering\Character\CharacterGatherController.cs" />
-     <Compile Include="Assets\Scripts\Gathering\Character\ResourceManager.cs" />
      <Compile Include="Assets\Scripts\Gathering\Gatherable.cs" />
-     <Compile Include="Assets\Scripts\Gathering\GatherTypes\Rock.cs" />
-     <Compile Include="Assets\Scripts\Gathering\GatherTypes\Tree.cs" />
+     <Compile Include="Assets\Scripts\Inventory\Character\Inventory.cs" />
+     <Compile Include="Assets\Scripts\Inventory\CostumInventoryDragger.cs" />
+     <Compile Include="Assets\Scripts\Inventory\InventoryUIManager.cs" />
+     <Compile Include="Assets\Scripts\Inventory\Item.cs" />
+     <Compile Include="Assets\Scripts\Inventory\ItemHolder.cs" />
+     <Compile Include="Assets\Scripts\Inventory\ItemInfo.cs" />
      <Compile Include="Assets\Scripts\PublicEnums.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>/Users/Casper/Library/Projects/Unity/EternalDarknessSurvival/EternalDarkessSurvival/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
