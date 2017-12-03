@@ -15,20 +15,35 @@ public class BuildingManager : MonoBehaviour
     private int _rotation = 0;
     private bool _firstRun = true;
     private LayerMask layerMask;
-    public GameObject wall;
     public LayerMask BuildCheckMask;
     private bool IsFree = false;
+    public bool IsBuilding = false;
+    public GameObject BuildingObject;
+
+    public List<GameObject> CollidingObjects;
 
     private GameObject _buildable;
 	// Use this for initialization
 
     void Update()
     {
-        Build(wall);
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            IsBuilding = false;
+            BuildingObject = null;
+            _buildable.transform.position = Vector3.up * 10000000;
+            _firstRun = true;
+        }
+
+        if (IsBuilding)
+            Build(BuildingObject);
+
     }
 
     public bool Build(GameObject Buildable)
     {
+        CollidingObjects = new List<GameObject>();
         IsFree = true;
         if (_firstRun)
         {
@@ -45,11 +60,11 @@ public class BuildingManager : MonoBehaviour
 
         RaycastHit[] hits;
         hits = Physics.RaycastAll(Camera.main.ScreenPointToRay(Input.mousePosition), layerMask);
-        RaycastHit hit = hits[0];
-        Vector3 mousePos = hit.point;
-        mousePos.y = _buildable.transform.localScale.y / 2;
-        _buildable.transform.position = mousePos;
-
+        RaycastHit hit;
+            hit = hits[0];
+            Vector3 mousePos = hit.point;
+            mousePos.y = _buildable.transform.localScale.y / 2;
+            _buildable.transform.position = mousePos;
 
 
         float colliderSize = _buildable.transform.localScale.x;
@@ -70,8 +85,9 @@ public class BuildingManager : MonoBehaviour
         foreach (RaycastHit raycastHit in sphereHit)
         {
             if(_buildable.gameObject.GetComponent<Collider>().bounds.Intersects(raycastHit.transform.gameObject.GetComponent<Collider>().bounds))
-                if (raycastHit.transform.gameObject.tag != "Floor" && raycastHit.transform.gameObject.tag != "Untagged")
+                if (raycastHit.transform.gameObject.tag != "Floor")
                 {
+                    CollidingObjects.Add(raycastHit.transform.gameObject);
                     Debug.Log(raycastHit.transform.gameObject.tag);
                     _buildable.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 0.3f);
                     return false;
@@ -80,7 +96,7 @@ public class BuildingManager : MonoBehaviour
 
         _buildable.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 0.3f);
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetMouseButtonDown(0))
         {
             PlaceBuildable(_buildable);
             _buildable = Instantiate(Buildable, Vector3.zero, Quaternion.identity);
