@@ -51,17 +51,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BuildingMenuScript.cs" />
-     <Compile Include="Assets\ButtonScript.cs" />
      <Compile Include="Assets\Scripts\Building\BuildingManager.cs" />
+     <Compile Include="Assets\Scripts\Building\BuildingMenuScript.cs" />
+     <Compile Include="Assets\Scripts\Building\ButtonScript.cs" />
+     <Compile Include="Assets\Scripts\Character\CameraMover.cs" />
      <Compile Include="Assets\Scripts\Character\CharacterMovement.cs" />
      <Compile Include="Assets\Scripts\Character\ClickMovement.cs" />
-     <Compile Include="Assets\Scripts\FollowLightScript.cs" />
      <Compile Include="Assets\Scripts\Gathering\Character\CharacterGatherController.cs" />
      <Compile Include="Assets\Scripts\Gathering\Character\ResourceManager.cs" />
      <Compile Include="Assets\Scripts\Gathering\Gatherable.cs" />
      <Compile Include="Assets\Scripts\Gathering\GatherTypes\Rock.cs" />
      <Compile Include="Assets\Scripts\Gathering\GatherTypes\Tree.cs" />
+     <Compile Include="Assets\Scripts\Mobs\MobMovementScript.cs" />
      <Compile Include="Assets\Scripts\PublicEnums.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>C:/Users/Kasper/Documents/EternalDarknessSurvival/EternalDarkessSurvival/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
