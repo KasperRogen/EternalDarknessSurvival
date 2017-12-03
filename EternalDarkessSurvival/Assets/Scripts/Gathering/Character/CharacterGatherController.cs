@@ -30,7 +30,7 @@ public class CharacterGatherController : MonoBehaviour {
 				if (gatherObject != null)
 				{
 					// Gatherable object found and clicked on! Do shit.
-					gatherObject.Gather(10, gameObject);
+					gatherObject.Gather(9, gameObject);
 				}
 			}
 		}
