@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 65788524723526358}
   - component: {fileID: 23593369750434046}
   - component: {fileID: 208258547792831606}
+  - component: {fileID: 114556506940212580}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -96,6 +97,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114556506940212580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1561531886342110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4580033cc841c34fa2ae23520fffab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WoodPrice: 0
+  StonePrice: 10
 --- !u!208 &208258547792831606
 NavMeshObstacle:
   m_ObjectHideFlags: 1

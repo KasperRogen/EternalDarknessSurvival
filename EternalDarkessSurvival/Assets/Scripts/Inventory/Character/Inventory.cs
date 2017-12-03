@@ -22,6 +22,14 @@ public class Inventory : MonoBehaviour {
 		}
 	}
 
+
+    public void DecrementResource(PublicEnums.ItemType type, int quantity)
+    {
+        
+    }
+
+
+
 	// Remove items from inventory
 	public void RemoveItem(Item removeItem){
 		if(Items.Any() && removeItem != null){
