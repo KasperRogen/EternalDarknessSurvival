@@ -10,7 +10,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class FollowLightScript : MonoBehaviour
+public class MobMovementScript : MonoBehaviour
 {
     public float seeDistance;
     private Vector3 _wanderPosition;
