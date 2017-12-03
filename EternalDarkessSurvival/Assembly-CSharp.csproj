@@ -51,6 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\MapGeneration\Scripts\MapGenerator.cs" />
+     <Compile Include="Assets\MapGeneration\Scripts\MapSegment.cs" />
      <Compile Include="Assets\Scripts\Building\BuildingManager.cs" />
      <Compile Include="Assets\Scripts\Building\BuildingMenuScript.cs" />
      <Compile Include="Assets\Scripts\Building\ButtonScript.cs" />
