@@ -179,7 +179,7 @@ public class BuildingManager : MonoBehaviour
                     raycastHit.transform.gameObject.tag != "Terrain")
                 {
                     CollidingObjects.Add(raycastHit.transform.gameObject);
-                    Debug.Log(raycastHit.transform.gameObject.tag);
+//                    Debug.Log(raycastHit.transform.gameObject.tag);
                     _buildable.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 0.3f);
                     return false;
                 }

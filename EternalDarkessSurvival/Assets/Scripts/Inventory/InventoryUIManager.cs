@@ -19,15 +19,15 @@ public class InventoryUIManager : MonoBehaviour {
 	void Start()
 	{
 		InitFieldItems();
-		UpdateFieldItems();
 	}
 
 	void Update(){
 		if(Input.GetKeyDown(KeyCode.I)){
 			UIInventory.SetActive(!UIInventory.active);
 		}
-
-		UpdateFieldItems();
+		if(UIInventory.active){
+			UpdateFieldItems();
+		}
 	}
 
 	// Initialize all FieldItems

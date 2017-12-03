@@ -25,7 +25,19 @@ public class Inventory : MonoBehaviour {
 
     public void DecrementResource(PublicEnums.ItemType type, int quantity)
     {
-        
+		Item ItemToPick = Items.Last(i => i.ItemType == type);
+		if(ItemToPick.Quantity - quantity >= 0){
+			ItemToPick.Quantity -= quantity;
+			if(ItemToPick.Quantity <= 0){
+				RemoveItem(ItemToPick);
+			}
+			return;
+		}
+		if(ItemToPick.Quantity - quantity < 0){
+			ItemToPick.Quantity -= ItemToPick.Quantity;
+			int newquantity = (quantity - ItemToPick.Quantity) * (-1);
+			DecrementResource(type, newquantity);
+		}
     }
 
 
@@ -48,7 +60,7 @@ public class Inventory : MonoBehaviour {
 	public void DropItem(Item item){
 		DropPrefab.GetComponent<Gatherable>().resourceCount = item.Quantity;
 		DropPrefab.GetComponent<Gatherable>().resourceType = item.ItemType;
-		Instantiate(DropPrefab, transform.position, transform.rotation);
+		Instantiate(DropPrefab, transform.position + Vector3.forward, transform.rotation);
 	}
 
 	// Add ResourceItems
