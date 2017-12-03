@@ -19,6 +19,7 @@ public class InventoryUIManager : MonoBehaviour {
 	void Start()
 	{
 		InitFieldItems();
+		UpdateFieldItems();
 	}
 
 	void Update(){

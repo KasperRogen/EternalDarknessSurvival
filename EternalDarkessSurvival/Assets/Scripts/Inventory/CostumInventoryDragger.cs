@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-public class CostumInventoryDragger : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
+public class CostumInventoryDragger : MonoBehaviour, IPointerDownHandler {
 
 	public Inventory Inventory;
 	Image CurrentlyDraggedItem;
@@ -33,15 +33,10 @@ public class CostumInventoryDragger : MonoBehaviour, IPointerDownHandler, IPoint
 
 	// Use this for initialization
 	public void OnBeginDrag(GameObject obj){
-		CurrentlyDraggedItem = obj.GetComponent<Image>();
-		SavedLoc = CurrentlyDraggedItem.transform.position;
-		Dragging = true;
-	}
-
-	public void OnPointerUp(PointerEventData eventData){
-		if(eventData.pointerEnter == CurrentlyDraggedItem){
-			Debug.Log("Hey there");
-
+		if(obj.GetComponent<ItemHolder>().Item != null){
+			CurrentlyDraggedItem = obj.GetComponent<Image>();
+			SavedLoc = CurrentlyDraggedItem.transform.position;
+			Dragging = true;
 		}
 	}
 
