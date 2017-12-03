@@ -125,8 +125,12 @@ public class BuildingManager : MonoBehaviour
                 PlaceBuildable(_buildable);
                 _buildable = Instantiate(Buildable, Vector3.zero, Quaternion.identity);
                 InitBuildable(_buildable);
-                Player.GetComponent<Inventory>().DecrementResource(PublicEnums.ItemType.Wood, Buildable.GetComponent<DeployableStats>().WoodPrice);
-                Player.GetComponent<Inventory>().DecrementResource(PublicEnums.ItemType.Stone, Buildable.GetComponent<DeployableStats>().StonePrice);
+
+                if (Buildable.GetComponent<DeployableStats>().WoodPrice > 0)
+                    Player.GetComponent<Inventory>().DecrementResource(PublicEnums.ItemType.Wood, Buildable.GetComponent<DeployableStats>().WoodPrice);
+
+                if (Buildable.GetComponent<DeployableStats>().StonePrice > 0)
+                    Player.GetComponent<Inventory>().DecrementResource(PublicEnums.ItemType.Stone, Buildable.GetComponent<DeployableStats>().StonePrice);
             }
 
             //Buildable.GetComponent<DeployableStats>()
