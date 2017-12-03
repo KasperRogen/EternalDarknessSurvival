@@ -33,13 +33,16 @@ public class GenerateTerrainFromNoise : MonoBehaviour
     {
         Vector3 startPos = new Vector3(center.x - width / 2, center.y, center.z - height / 2);
 
-        for (int x = 0; x < width; x++)
+        for (float x = (int)startPos.x ; x < (int)startPos.x + width; x++)
         {
-            for (int z = 0; z < height; z++)
+            for (float z = (int)startPos.z; z < (int)startPos.z + height; z++)
             {
-                float noise = Mathf.PerlinNoise(x, z);
-                float distFromCenter = (center - new Vector3(x, 0, z)).magnitude;
-         //       if (noise - distFromCenter.Remap((width + height) / 4 ) >= Random.Range(0, 60))
+                double noise = Mathf.PerlinNoise(x.Remap(0f,width,0f,1f), z.Remap(0f,height,0f,1f));
+                float distFromCenter = (float)(center - new Vector3(x, 0, z)).magnitude;
+                distFromCenter = distFromCenter.Remap(0f, 50f, 0f, 1f);
+                float rand = Random.Range(0, 20);
+                
+                if (noise - distFromCenter >= rand)
                 {
                     Quaternion rot = Random.rotation;
                     rot.x = 0;
@@ -48,6 +51,7 @@ public class GenerateTerrainFromNoise : MonoBehaviour
                 }
             }
         }
+
     }
 
 
@@ -58,9 +62,9 @@ public class GenerateTerrainFromNoise : MonoBehaviour
 public static class ExtensionMethods
 {
 
-public static float Remap(this float value, float from1, float to1, float from2, float to2)
-{
-return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
-}
+    public static float Remap(this float value, float from1, float to1, float from2, float to2)
+    {
+        return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
+    }
 
 }
