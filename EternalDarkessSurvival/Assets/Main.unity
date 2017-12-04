@@ -543,12 +543,12 @@ Prefab:
     - target: {fileID: 224889504391276612, guid: 74bb904e799bf8a4fb9db6cb54825cd2,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 464.69
+      value: 205.69
       objectReference: {fileID: 0}
     - target: {fileID: 224889504391276612, guid: 74bb904e799bf8a4fb9db6cb54825cd2,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 259.45898
+      value: 113.459
       objectReference: {fileID: 0}
     - target: {fileID: 114252133089023486, guid: 74bb904e799bf8a4fb9db6cb54825cd2,
         type: 2}
@@ -823,8 +823,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1067300965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 462, y: 260, z: 0}
-  m_LocalScale: {x: 0.4814815, y: 0.4814815, z: 0.4814815}
+  m_LocalPosition: {x: 203, y: 114, z: 0}
+  m_LocalScale: {x: 0.21111111, y: 0.21111111, z: 0.21111111}
   m_Children:
   - {fileID: 1240704889}
   m_Father: {fileID: 0}
@@ -1223,8 +1223,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c107fbb190fae6489f1656b07a68b47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Trees:
-  - {fileID: 1719180600883884, guid: 43ef0fe773e10eb49a0a91834836cdc5, type: 2}
-  Stones:
-  - {fileID: 1954199237138034, guid: 25b0d129bd99dde4bb77f3fd4d731044, type: 2}
-  - {fileID: 1180345256288486, guid: 66dcb9e7177074cc685f4372c26ca735, type: 2}
+  GatherTypes:
+  - {fileID: 114736699030220280, guid: 25b0d129bd99dde4bb77f3fd4d731044, type: 2}
+  - {fileID: 114477542540226542, guid: 43ef0fe773e10eb49a0a91834836cdc5, type: 2}

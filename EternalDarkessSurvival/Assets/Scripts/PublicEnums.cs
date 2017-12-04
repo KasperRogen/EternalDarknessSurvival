@@ -7,11 +7,7 @@ public static class PublicEnums {
     Stone,
     Wood
     }
-    public enum ResourceType
-    {
-        Stone,
-        Wood
-    }
+
 
     public enum TerrainType
     {

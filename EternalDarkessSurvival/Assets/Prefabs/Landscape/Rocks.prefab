@@ -108,8 +108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e916be78f1e5442e4b11ae3ea215d3df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceCount: 15
+  resourceCount: 50
   resourceType: 0
+  TerrainType: 1
 --- !u!208 &208492925895906036
 NavMeshObstacle:
   m_ObjectHideFlags: 1
