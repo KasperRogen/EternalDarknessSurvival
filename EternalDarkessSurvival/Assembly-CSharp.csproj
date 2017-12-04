@@ -52,26 +52,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Combatable.cs" />
-    <Compile Include="Assets\EntityStats.cs" />
-    <Compile Include="Assets\InputManager.cs" />
     <Compile Include="Assets\Scripts\Building\BuildingManager.cs" />
     <Compile Include="Assets\Scripts\Building\BuildingMenuScript.cs" />
     <Compile Include="Assets\Scripts\Building\ButtonScript.cs" />
     <Compile Include="Assets\Scripts\Building\DeployableStats.cs" />
     <Compile Include="Assets\Scripts\Character\CameraMover.cs" />
     <Compile Include="Assets\Scripts\Character\ClickMovement.cs" />
+    <Compile Include="Assets\Scripts\Character\Combatable.cs" />
+    <Compile Include="Assets\Scripts\Character\EntityStats.cs" />
+    <Compile Include="Assets\Scripts\Character\InputManager.cs" />
     <Compile Include="Assets\Scripts\Gathering\Character\CharacterGatherController.cs" />
     <Compile Include="Assets\Scripts\Gathering\Character\ProximityPicker.cs" />
     <Compile Include="Assets\Scripts\Gathering\Gatherable.cs" />
     <Compile Include="Assets\Scripts\Inventory\Character\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Character\InventoryUIManager.cs" />
     <Compile Include="Assets\Scripts\Inventory\CostumInventoryDragger.cs" />
-    <Compile Include="Assets\Scripts\Inventory\InventoryUIManager.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item.cs" />
     <Compile Include="Assets\Scripts\Inventory\ItemHolder.cs" />
     <Compile Include="Assets\Scripts\Inventory\ItemInfo.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ToolItem.cs" />
     <Compile Include="Assets\Scripts\Mobs\MobMovementScript.cs" />
+    <Compile Include="Assets\Scripts\Mobs\MobSpawner.cs" />
     <Compile Include="Assets\Scripts\PublicEnums.cs" />
+    <Compile Include="Assets\Scripts\publicParticles.cs" />
+    <Compile Include="Assets\Scripts\Tools\Character\ToolManager.cs" />
+    <Compile Include="Assets\Scripts\Tools\Tool.cs" />
     <Compile Include="Assets\Scripts\World\GenerateTerrainFromNoise.cs" />
     <Compile Include="Assets\Scripts\World\MapGenerator.cs" />
     <Compile Include="Assets\Scripts\World\MapSegment.cs" />

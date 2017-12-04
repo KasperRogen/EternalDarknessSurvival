@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4912248622669696}
   - component: {fileID: 114461009059747074}
+  - component: {fileID: 114645330036855564}
   m_Layer: 0
   m_Name: sword_item
   m_TagString: Untagged
@@ -58,3 +59,16 @@ MonoBehaviour:
   Quantity: 0
   MaxQuantity: 1
   Tool: {fileID: 114144817108840518, guid: e9a21f65a9d0440b4abd76eceb114749, type: 2}
+--- !u!114 &114645330036855564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1766120505033224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4580033cc841c34fa2ae23520fffab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WoodPrice: 30
+  StonePrice: 200

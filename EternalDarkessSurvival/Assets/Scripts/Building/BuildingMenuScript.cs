@@ -10,6 +10,7 @@ public class BuildingMenuScript : MonoBehaviour {
     public GameObject ButtonTemplate;
     public List<CustomButton> buttons;
     public List<Button> Todisable;
+    public Inventory Inventory;
 
 	// Use this for initialization
 	void Start () {
@@ -107,6 +108,21 @@ public class BuildingMenuScript : MonoBehaviour {
 
     public void UpdateMenu(CustomButton button)
     {
+        int currentWood = 0;
+        int currentStone = 0;
+
+        if ( button.ToCraft != null && button.ToCraft.GetComponent<ToolItem>() != null)
+        {
+            if (Inventory.Items.Any(i => (i).ItemType == PublicEnums.ItemType.Wood))
+            {
+                currentWood = Inventory.Items.Where(i => i.ItemType == PublicEnums.ItemType.Wood).Sum(i => i.Quantity);
+            }
+            if (Inventory.Items.Any(i => i.ItemType == PublicEnums.ItemType.Stone))
+            {
+                currentStone = Inventory.Items.Where(i => i.ItemType == PublicEnums.ItemType.Stone)
+                    .Sum(i => i.Quantity);
+            }
+        }
 
         Debug.Log("THIS NOW PRESSED: " + button.Name);
 
@@ -118,7 +134,18 @@ public class BuildingMenuScript : MonoBehaviour {
         if (button.ToPlace != null)
         {
             GetComponent<BuildingManager>().IsBuilding = true;
-            GetComponent<BuildingManager>().BuildingObject = button.ToPlace;
+            GetComponent<BuildingManager>().BuildingObject = button.ToCraft;
+        }
+
+        if (button.ToCraft != null && button.Name == "Pickaxe" || button.Name == "Axe" || button.Name == "Sword")
+        {
+            if (button.ToCraft.GetComponent<DeployableStats>().WoodPrice <= currentWood && button.ToCraft.GetComponent<DeployableStats>().StonePrice <= currentStone)
+            {
+                Inventory.DecrementResource(PublicEnums.ItemType.Wood, button.ToCraft.GetComponent<DeployableStats>().WoodPrice);
+                Inventory.DecrementResource(PublicEnums.ItemType.Stone, button.ToCraft.GetComponent<DeployableStats>().StonePrice);
+
+                Inventory.AddToolItem(button.ToCraft.GetComponent<ToolItem>());
+            }
         }
         
 
@@ -171,5 +198,6 @@ public class CustomButton
     public List<GameObject> childrenGOS;
     public List<CustomButton> Children;
     public GameObject ToPlace;
+    public GameObject ToCraft;
 }
 

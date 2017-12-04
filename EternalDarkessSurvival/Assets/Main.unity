@@ -860,6 +860,7 @@ MonoBehaviour:
         Children: []
         ToPlace: {fileID: 1947346926938164, guid: 8e15a580ed0ec4e4db929a2d469bd79f,
           type: 2}
+        ToCraft: {fileID: 0}
       - Name: Spike
         Parent: {fileID: 0}
         Level: 0
@@ -870,7 +871,9 @@ MonoBehaviour:
         Children: []
         ToPlace: {fileID: 1275222135803756, guid: 67ff853ce06fdc544871fe6413d7fdb2,
           type: 2}
+        ToCraft: {fileID: 0}
       ToPlace: {fileID: 0}
+      ToCraft: {fileID: 0}
     - Name: Productive
       Parent: {fileID: 0}
       Level: 0
@@ -888,7 +891,9 @@ MonoBehaviour:
         childrenGOS: []
         Children: []
         ToPlace: {fileID: 0}
+        ToCraft: {fileID: 0}
       ToPlace: {fileID: 0}
+      ToCraft: {fileID: 0}
     - Name: Light
       Parent: {fileID: 0}
       Level: 0
@@ -906,6 +911,7 @@ MonoBehaviour:
         childrenGOS: []
         Children: []
         ToPlace: {fileID: 0}
+        ToCraft: {fileID: 0}
       - Name: Torch
         Parent: {fileID: 0}
         Level: 0
@@ -916,8 +922,11 @@ MonoBehaviour:
         Children: []
         ToPlace: {fileID: 1383144751258692, guid: de8c2842f1f9b084eb6db96c7fa1957d,
           type: 2}
+        ToCraft: {fileID: 0}
       ToPlace: {fileID: 0}
+      ToCraft: {fileID: 0}
     ToPlace: {fileID: 0}
+    ToCraft: {fileID: 0}
   - Name: Crafting
     Parent: {fileID: 0}
     Level: 0
@@ -942,7 +951,8 @@ MonoBehaviour:
         IsDrawn: 0
         childrenGOS: []
         Children: []
-        ToPlace: {fileID: 1561531886342110, guid: 8bd60ec907ad6374e9800a71d248decd,
+        ToPlace: {fileID: 0}
+        ToCraft: {fileID: 1891537850852810, guid: 2984e98cf999c454f96331ed1e5d596b,
           type: 2}
       - Name: Axe
         Parent: {fileID: 0}
@@ -952,7 +962,8 @@ MonoBehaviour:
         IsDrawn: 0
         childrenGOS: []
         Children: []
-        ToPlace: {fileID: 1275222135803756, guid: 67ff853ce06fdc544871fe6413d7fdb2,
+        ToPlace: {fileID: 0}
+        ToCraft: {fileID: 1874488012236744, guid: c4132bf8b95624895aa7a1e7975351b6,
           type: 2}
       - Name: Sword
         Parent: {fileID: 0}
@@ -962,11 +973,15 @@ MonoBehaviour:
         IsDrawn: 0
         childrenGOS: []
         Children: []
-        ToPlace: {fileID: 1275222135803756, guid: 67ff853ce06fdc544871fe6413d7fdb2,
+        ToPlace: {fileID: 0}
+        ToCraft: {fileID: 1766120505033224, guid: 2b08c6f8ea1b44b3597f070412beeb86,
           type: 2}
       ToPlace: {fileID: 0}
+      ToCraft: {fileID: 0}
     ToPlace: {fileID: 0}
+    ToCraft: {fileID: 0}
   Todisable: []
+  Inventory: {fileID: 1654534006}
 --- !u!114 &1067300971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1152,6 +1167,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1568246981667034, guid: 74bb904e799bf8a4fb9db6cb54825cd2,
     type: 2}
   m_PrefabInternal: {fileID: 583547598}
+--- !u!114 &1654534006 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114445719509231944, guid: 74bb904e799bf8a4fb9db6cb54825cd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 583547598}
+  m_Script: {fileID: 11500000, guid: e935975f2af6543ef8d4b120cdde9f29, type: 3}
 --- !u!1 &1858845028
 GameObject:
   m_ObjectHideFlags: 0

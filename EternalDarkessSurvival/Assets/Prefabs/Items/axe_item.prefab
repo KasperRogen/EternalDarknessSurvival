@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4735006685541104}
   - component: {fileID: 114711142702739858}
+  - component: {fileID: 114638228133175278}
   m_Layer: 0
   m_Name: axe_item
   m_TagString: Untagged
@@ -40,6 +41,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114638228133175278
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1874488012236744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4580033cc841c34fa2ae23520fffab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WoodPrice: 15
+  StonePrice: 30
 --- !u!114 &114711142702739858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55,6 +69,6 @@ MonoBehaviour:
   DropPrefab: {fileID: 1764378955740934, guid: 4104ab64e10034c548ef70b5d7d57124, type: 2}
   Sprite: {fileID: 21300000, guid: c4023591a1837402abae58af4532a0db, type: 3}
   Name: Axe
-  Quantity: 0
+  Quantity: 1
   MaxQuantity: 1
   Tool: {fileID: 114828384514982968, guid: b15d185bb63fa4f43999192d27febf34, type: 2}
