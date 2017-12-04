@@ -79,13 +79,14 @@ public class BuildingManager : MonoBehaviour
 
 
 
-        
-        
-        if (Input.GetMouseButtonDown(0))
-        {
-            if(_buildable.GetComponent<NavMeshObstacle>() != null)
-            _buildable.GetComponent<NavMeshObstacle>().enabled = true;
-            StartCoroutine(BuildObject(Buildable));
+
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (_buildable.GetComponent<NavMeshObstacle>() != null)
+                    _buildable.GetComponent<NavMeshObstacle>().enabled = true;
+                StartCoroutine(BuildObject(BuildingObject));
+            }
         }
     }
 

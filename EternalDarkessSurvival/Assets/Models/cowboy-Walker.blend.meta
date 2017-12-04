@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
 guid: 8e11770bf30834f71bde1ba056dd5709
-timeCreated: 1512348037
-=======
-guid: ee2e461410c3df943a124c9f4bf2461c
-timeCreated: 1512347753
->>>>>>> Stashed changes
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -79,11 +72,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: None__CharacterTexture_psd
-<<<<<<< Updated upstream
     second: {fileID: 2100000, guid: 8a7119b6efde349818dc25c269b3a382, type: 2}
-=======
-    second: {fileID: 2100000, guid: 2ba97c408136a9443a8edd2fa51d9c00, type: 2}
->>>>>>> Stashed changes
   materials:
     importMaterials: 1
     materialName: 0
@@ -102,20 +91,13 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-<<<<<<< Updated upstream
-    animationCompression: 1
-=======
     animationCompression: 3
->>>>>>> Stashed changes
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-<<<<<<< Updated upstream
-    clipAnimations: []
-=======
     clipAnimations:
     - serializedVersion: 16
       name: Default Take
@@ -145,7 +127,6 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
->>>>>>> Stashed changes
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -176,10 +157,6 @@ ModelImporter:
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
-<<<<<<< Updated upstream
-    human: []
-    skeleton: []
-=======
     human:
     - boneName: spine
       humanName: Hips
@@ -487,7 +464,6 @@ ModelImporter:
       position: {x: 0.51358855, y: 0.46013242, z: 1.1415056}
       rotation: {x: 0.23426324, y: -0.5518672, z: 0.53325117, w: 0.5968304}
       scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
->>>>>>> Stashed changes
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -498,17 +474,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-<<<<<<< Updated upstream
-    hasExtraRoot: 0
-    skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
-=======
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 3
->>>>>>> Stashed changes
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

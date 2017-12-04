@@ -464,7 +464,6 @@ GameObject:
   - component: {fileID: 114152374591487518}
   - component: {fileID: 114252133089023486}
   - component: {fileID: 114445719509231944}
-  - component: {fileID: 114986411290186816}
   - component: {fileID: 195921999110300122}
   - component: {fileID: 114047522839550114}
   - component: {fileID: 114530098370779740}
@@ -675,8 +674,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1568246981667034}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.6900024, y: 0.54100037, z: -5.43}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.6900024, y: 0.54100037, z: -5.4300003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224889504391276612}
@@ -1297,7 +1296,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0884ce0df497640fdae643a45e32473d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MiningDistance: 2.5
+  StoneParticleSystem: {fileID: 198910721153372466, guid: d16e0c420e05ccc448fc8029873d2e69,
+    type: 2}
+  WoodParticleSystem: {fileID: 198711599630993900, guid: 828521823b53d4c4abedfd265493347d,
+    type: 2}
+  MiningDistance: 4
 --- !u!114 &114259573109191500
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2196,20 +2199,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Item: {fileID: 0}
---- !u!114 &114986411290186816
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1568246981667034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9355a20b25a1e4bc5a6a108517548a64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Inventory: {fileID: 114445719509231944}
-  UIInventory: {fileID: 1052651712605924}
-  InventoryFieldGameObject: {fileID: 1538619417700764}
 --- !u!135 &135874965505606436
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -20,7 +20,7 @@ public class ClickMovement : MonoBehaviour
 	{
 	    anim.SetFloat("speed", _agent.velocity.magnitude);
 	    anim.speed = _agent.velocity.magnitude;
-
+     
 
         if (Input.GetMouseButtonDown(1))
 		{
