@@ -3,8 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class CharacterGatherController : MonoBehaviour {
-	
+public class CharacterGatherController : MonoBehaviour
+{
+    public ParticleSystem StoneParticleSystem;
+    public ParticleSystem WoodParticleSystem;
+
+    public float MiningDistance = 2.5f;
+
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown(0))
@@ -22,7 +27,7 @@ public class CharacterGatherController : MonoBehaviour {
 		{
 			float distanceToResource = (rayHit.transform.position - transform.position).magnitude;
 			//Debug.Log(distanceToResource);
-			if (distanceToResource < 2)
+			if (distanceToResource < MiningDistance)
 			{
 				Debug.DrawLine(transform.position, rayHit.transform.position);
 				//Debug.Log(rayHit.GetType());
@@ -30,7 +35,11 @@ public class CharacterGatherController : MonoBehaviour {
 				if (gatherObject != null)
 				{
 					// Gatherable object found and clicked on! Do shit.
-					gatherObject.Gather(9, gameObject);
+				    if (gatherObject.resourceType == PublicEnums.ItemType.Stone)
+				        Instantiate(StoneParticleSystem, rayHit.point, Quaternion.identity);
+				    else if (gatherObject.resourceType == PublicEnums.ItemType.Wood)
+				        Instantiate(WoodParticleSystem, rayHit.point, Quaternion.identity);
+                    gatherObject.Gather(9, gameObject);
 				}
 			}
 		}

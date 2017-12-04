@@ -110,6 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceCount: 50
   resourceType: 0
+  TerrainType: 1
 --- !u!208 &208492925895906036
 NavMeshObstacle:
   m_ObjectHideFlags: 1

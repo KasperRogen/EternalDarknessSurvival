@@ -22,7 +22,8 @@ GameObject:
   - component: {fileID: 33939738267153382}
   - component: {fileID: 23859929914781082}
   - component: {fileID: 64061621759992860}
-  - component: {fileID: 64860005100816516}
+  - component: {fileID: 208185315104004498}
+  - component: {fileID: 114506150088361164}
   m_Layer: 0
   m_Name: Rocks2-joined
   m_TagString: Untagged
@@ -98,17 +99,31 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 3097ed9b3abf749f48c8b2c7311e4853, type: 3}
---- !u!64 &64860005100816516
-MeshCollider:
+--- !u!114 &114506150088361164
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1180345256288486}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Convex: 1
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 3097ed9b3abf749f48c8b2c7311e4853, type: 3}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e916be78f1e5442e4b11ae3ea215d3df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceCount: 15
+  resourceType: 0
+--- !u!208 &208185315104004498
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1180345256288486}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.001, y: 0.001, z: 0.002}
+  m_TimeToStationary: 0.5
