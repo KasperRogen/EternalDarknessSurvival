@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33912230486722418}
   - component: {fileID: 135533552294781982}
   - component: {fileID: 23163809563268846}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 114045336565639338}
   - component: {fileID: 114501718752190760}
   - component: {fileID: 114541745881471190}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Zombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 33236119036168808}
   - component: {fileID: 136939822626376484}
   - component: {fileID: 23440490335614934}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 33064703662051026}
   - component: {fileID: 135635603316673030}
   - component: {fileID: 23688862224917518}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +317,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf29bea8421bc04f9f72e6c0bec2213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 1
   seeDistance: 10
 --- !u!114 &114501718752190760
 MonoBehaviour:
@@ -343,6 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb274f91a6a9a4341aca9f411bdf99f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AttackCooldown: 0.3
 --- !u!135 &135533552294781982
 SphereCollider:
   m_ObjectHideFlags: 1
