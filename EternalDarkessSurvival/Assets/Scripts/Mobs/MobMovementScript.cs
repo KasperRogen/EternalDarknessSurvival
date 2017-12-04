@@ -11,6 +11,8 @@ public class MobMovementScript : MonoBehaviour
     private Vector3 _wanderPosition;
     private Combatable _combat;
     private EntityStats _stats;
+    public MobSpawner MobSpawner;
+    public GameObject Player;
 
     private NavMeshAgent _navMeshAgent;
 
@@ -20,7 +22,25 @@ public class MobMovementScript : MonoBehaviour
 	    _stats = GetComponent<EntityStats>();
 	    _combat = GetComponent<Combatable>();
 	    _navMeshAgent = GetComponent<NavMeshAgent>();
+
+	    MobSpawner.OnSpawnMobs += DestroyThis;
+
 	}
+
+
+
+    void DestroyThis()
+    {
+        if((transform.position - Player.transform.position).magnitude > 300) { 
+            Debug.Log("IM DED NAO");
+        MobSpawner.OnSpawnMobs -= DestroyThis;
+        Destroy(gameObject);
+        }
+    }
+
+
+
+
 	
 	// Update is called once per frame
 	void Update ()

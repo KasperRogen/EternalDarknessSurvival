@@ -45,23 +45,16 @@ public class GenerateTerrainFromNoise : MonoBehaviour
 
     public void GenerateTerrain(Vector3 center, int width, int height, PublicEnums.TerrainType type)
     {
-        Debug.Log("CALL VECTOR: "+ center);
             Vector3 startPos = new Vector3(center.x - width / 2, center.y, center.z - height / 2);
         
         if (type == PublicEnums.TerrainType.Empty)
         {
-            Debug.Log("Empty");
-
-            Debug.Log("X: " + ((int)startPos.x) + " < " + ((int)startPos.x + width));
-            Debug.Log("Z: " + ((int)startPos.z) + " < " + ((int)startPos.z + height));
-
+        
             for (float x = (int)startPos.x; x < (int)startPos.x + width; x+= 10)
             {
                 for (float z = (int)startPos.z; z < (int)startPos.z + height; z+= 10)
                 {
 
-                    //Debug.DrawLine(Vector3.zero, new Vector3(x, 0, z), Color.red, 15);
-                    Debug.Log(x + "Z: " + z);
                     Quaternion rot = Random.rotation;
                     rot.x = 0;
                     rot.z = 0;
@@ -70,11 +63,9 @@ public class GenerateTerrainFromNoise : MonoBehaviour
 
                     int randomType = Random.Range(0, EmptyOnEmptyChance + StoneOnEmptyChance + TreeOnEmptyChance);
 
-                    Debug.Log("randomtype:");
-
+            
                     if (randomType <= EmptyOnEmptyChance)
                     {
-                        Debug.Log("Place nothing");
                         continue;
                     } if (randomType <= EmptyOnEmptyChance + StoneOnEmptyChance)
                     {
@@ -84,8 +75,7 @@ public class GenerateTerrainFromNoise : MonoBehaviour
                         TypeToSet = PublicEnums.TerrainType.Tree;
                     }
 
-                    Debug.Log("Setting type: " + TypeToSet.ToString());
-
+                
                     Vector2 ToNoise = new Vector2(x, z);
 
                     double noise = Mathf.PerlinNoise(ToNoise.x.Remap(0f, width, 0f, 0.6f), ToNoise.y.Remap(0f, height, 0f, 0.6f));
@@ -94,7 +84,6 @@ public class GenerateTerrainFromNoise : MonoBehaviour
 
                     if (noise >= rand)
                     {
-                        Debug.Log("Setting it!");
                         if (GatherTypes.Any(it => it.TerrainType == TypeToSet))
                         {
                             Instantiate(GatherTypes.First(it => it.TerrainType == TypeToSet), new Vector3(ToNoise.x, 2, ToNoise.y), rot);
