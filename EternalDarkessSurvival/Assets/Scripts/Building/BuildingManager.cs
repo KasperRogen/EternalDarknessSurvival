@@ -66,16 +66,19 @@ public class BuildingManager : MonoBehaviour
                 _firstRun = false;
             }
 
+            Debug.Log("Building: " + _buildable.name);
+
             ColliderCheck();
 
             RaycastHit[] hits;
             hits = Physics.RaycastAll(Camera.main.ScreenPointToRay(Input.mousePosition), layerMask);
             RaycastHit hit;
+            if (hits.Any()) { 
             hit = hits[0];
             Vector3 mousePos = hit.point;
             mousePos.y = _buildable.transform.localScale.y / 2;
             _buildable.transform.position = mousePos;
-
+            }
 
 
             _buildable.transform.Rotate(Vector3.up, Input.GetAxis("Mouse ScrollWheel") * 10);
