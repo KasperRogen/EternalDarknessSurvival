@@ -23,7 +23,7 @@ public class MobSpawner : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        Player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
