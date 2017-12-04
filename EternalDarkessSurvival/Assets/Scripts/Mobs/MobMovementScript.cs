@@ -9,12 +9,16 @@ public class MobMovementScript : MonoBehaviour
 {
     public float seeDistance;
     private Vector3 _wanderPosition;
+    private Combatable _combat;
+    private EntityStats _stats;
 
     private NavMeshAgent _navMeshAgent;
 
 	// Use this for initialization
 	void Start ()
 	{
+	    _stats = GetComponent<EntityStats>();
+	    _combat = GetComponent<Combatable>();
 	    _navMeshAgent = GetComponent<NavMeshAgent>();
 	}
 	
@@ -29,10 +33,11 @@ public class MobMovementScript : MonoBehaviour
 	        if ((player.transform.position - transform.position).magnitude > player.GetComponent<Collider>().bounds.size.x/2 + transform.gameObject.GetComponent<Collider>().bounds.size.x)
 	        {
 	            _navMeshAgent.SetDestination(player.transform.position);
-	            transform.LookAt(player.transform.position);
 	        }
-	        else
+            else { 
                 _navMeshAgent.SetDestination(transform.position);
+                _combat.Attack(player);
+	        }
 
 
 
@@ -41,7 +46,6 @@ public class MobMovementScript : MonoBehaviour
 	        if ((FindClosestLight(VisibleLights).transform.position - transform.position).magnitude > 0.5f)
 	        {
 	            _navMeshAgent.SetDestination(FindClosestLight(VisibleLights).transform.position);
-	            transform.LookAt(FindClosestLight(VisibleLights).transform.position);
 	        }
 	        else
 	        {
