@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -33,67 +34,66 @@ public class BuildingManager : MonoBehaviour
         NavMeshPath = new NavMeshPath();
     }
 
+    public void AttemptBuild()
+    {
+        Build(BuildingObject);
+    }
 
+    public void StopBuild()
+    {
+        BuildingObject = null;
+        Destroy(_buildable.transform.gameObject);
+        _firstRun = true;
+    }
 
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(1))
-        {
-            IsBuilding = false;
-            BuildingObject = null;
-            Destroy(_buildable.transform.gameObject);
-            _firstRun = true;
-        }
-
         if (IsBuilding)
-            Build(BuildingObject);
-
-    }
-
-    public bool Build(GameObject Buildable)
-    {
-        CollidingObjects = new List<GameObject>();
-        IsFree = true;
-        if (_firstRun)
         {
-            _objectMat = Buildable.GetComponent<Renderer>().sharedMaterial;
-            _buildable = Instantiate(Buildable, Vector3.zero, Quaternion.identity);
-            _buildable.gameObject.GetComponent<Collider>().isTrigger = true;
-            _buildable.gameObject.AddComponent<Rigidbody>();
-            _buildable.gameObject.GetComponent<Rigidbody>().useGravity = false;
-            InitBuildable(_buildable);
-            layerMask = LayerMask.GetMask("Terrain");
-            _firstRun = false;
-        }
+            CollidingObjects = new List<GameObject>();
+            IsFree = true;
+            if (_firstRun)
+            {
+                _objectMat = BuildingObject.GetComponent<Renderer>().sharedMaterial;
+                _buildable = Instantiate(BuildingObject, Vector3.zero, Quaternion.identity);
+                _buildable.gameObject.GetComponent<Collider>().isTrigger = true;
+                _buildable.gameObject.AddComponent<Rigidbody>();
+                _buildable.gameObject.GetComponent<Rigidbody>().useGravity = false;
+                InitBuildable(_buildable);
+                layerMask = LayerMask.GetMask("Terrain");
+                _firstRun = false;
+            }
 
-        ColliderCheck();
+            ColliderCheck();
 
-        RaycastHit[] hits;
-        hits = Physics.RaycastAll(Camera.main.ScreenPointToRay(Input.mousePosition), layerMask);
-        RaycastHit hit;
+            RaycastHit[] hits;
+            hits = Physics.RaycastAll(Camera.main.ScreenPointToRay(Input.mousePosition), layerMask);
+            RaycastHit hit;
             hit = hits[0];
             Vector3 mousePos = hit.point;
             mousePos.y = _buildable.transform.localScale.y / 2;
             _buildable.transform.position = mousePos;
 
 
-        
 
 
-        _buildable.transform.Rotate(new Vector3(transform.rotation.x, Input.GetAxis("Mouse ScrollWheel") * 45, 0));
 
-        
-        
-        if (Input.GetMouseButtonDown(0))
-        {
+            _buildable.transform.Rotate(new Vector3(transform.rotation.x, Input.GetAxis("Mouse ScrollWheel") * 45, 0));
+
+
+
+
+        }
+    }
+
+    public void Build(GameObject Buildable)
+    {
+
+       
             _buildable.GetComponent<NavMeshObstacle>().enabled = true;
             StartCoroutine(BuildObject(Buildable));
-        }
 
-
-
-        return false;
     }
 
 

@@ -25,7 +25,7 @@ public class CharacterGatherController : MonoBehaviour {
 			if (distanceToResource < 2)
 			{
 				Debug.DrawLine(transform.position, rayHit.transform.position);
-				Debug.Log(rayHit.GetType());
+				//Debug.Log(rayHit.GetType());
 				Gatherable gatherObject = rayHit.transform.GetComponent<Gatherable>();
 				if (gatherObject != null)
 				{
