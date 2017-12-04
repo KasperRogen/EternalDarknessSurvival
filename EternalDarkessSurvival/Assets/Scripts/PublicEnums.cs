@@ -17,4 +17,10 @@ public static class PublicEnums {
         Spawn,
         Mountain
     }
+
+    public enum ToolType
+    {
+        Gather,
+        Weapoin
+    }
 }
