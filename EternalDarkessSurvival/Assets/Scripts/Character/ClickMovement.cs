@@ -3,7 +3,7 @@ using UnityEngine.AI;
 
 public class ClickMovement : MonoBehaviour
 {
-
+    public Animator anim;
     private NavMeshAgent _agent;
     private Vector3 targetPos;
 	
@@ -11,13 +11,18 @@ public class ClickMovement : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+	    anim = this.GetComponent<Animator>();
 		  _agent = GetComponent<NavMeshAgent>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
+	    anim.SetFloat("speed", _agent.velocity.magnitude);
+	    anim.speed = _agent.velocity.magnitude;
+     
 
-		if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1))
 		{
             RaycastHit hit;
 		    if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit)) {
