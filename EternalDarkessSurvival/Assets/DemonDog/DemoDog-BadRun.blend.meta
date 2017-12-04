@@ -1,0 +1,257 @@
+fileFormatVersion: 2
+guid: 425186d686b56fd4b9b51b1e330878e7
+timeCreated: 1512409045
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: breast_L
+    100002: breast_R
+    100004: DemoDog
+    100006: //RootNode
+    100008: Eye_L
+    100010: Eye_R
+    100012: foot_L
+    100014: foot_R
+    100016: front_foot_L
+    100018: front_foot_R
+    100020: front_shin_L
+    100022: front_shin_R
+    100024: front_thigh_L
+    100026: front_thigh_R
+    100028: front_toe_IK_L
+    100030: front_toe_IK_R
+    100032: front_toe_L
+    100034: front_toe_pole_L
+    100036: front_toe_pole_R
+    100038: front_toe_R
+    100040: Head
+    100042: Head_IK
+    100044: metarig
+    100046: pelvis_L
+    100048: pelvis_R
+    100050: shin_L
+    100052: shin_R
+    100054: shoulder_L
+    100056: shoulder_R
+    100058: spine_003
+    100060: spine_004
+    100062: spine_005
+    100064: spine_006
+    100066: spine_007
+    100068: spine_008
+    100070: spine_009
+    100072: spine_010
+    100074: thigh_L
+    100076: thigh_R
+    100078: toe_IK_L
+    100080: toe_IK_R
+    100082: toe_L
+    100084: toe_pole_L
+    100086: toe_pole_R
+    100088: toe_R
+    400000: breast_L
+    400002: breast_R
+    400004: DemoDog
+    400006: //RootNode
+    400008: Eye_L
+    400010: Eye_R
+    400012: foot_L
+    400014: foot_R
+    400016: front_foot_L
+    400018: front_foot_R
+    400020: front_shin_L
+    400022: front_shin_R
+    400024: front_thigh_L
+    400026: front_thigh_R
+    400028: front_toe_IK_L
+    400030: front_toe_IK_R
+    400032: front_toe_L
+    400034: front_toe_pole_L
+    400036: front_toe_pole_R
+    400038: front_toe_R
+    400040: Head
+    400042: Head_IK
+    400044: metarig
+    400046: pelvis_L
+    400048: pelvis_R
+    400050: shin_L
+    400052: shin_R
+    400054: shoulder_L
+    400056: shoulder_R
+    400058: spine_003
+    400060: spine_004
+    400062: spine_005
+    400064: spine_006
+    400066: spine_007
+    400068: spine_008
+    400070: spine_009
+    400072: spine_010
+    400074: thigh_L
+    400076: thigh_R
+    400078: toe_IK_L
+    400080: toe_IK_R
+    400082: toe_L
+    400084: toe_pole_L
+    400086: toe_pole_R
+    400088: toe_R
+    2300000: Eye_L
+    2300002: Eye_R
+    3300000: Eye_L
+    3300002: Eye_R
+    4300000: Eye_L
+    4300002: Eye_R
+    4300004: DemoDog
+    7400000: Default Take
+    7400002: metarigAction_001
+    9500000: //RootNode
+    13700000: DemoDog
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__DemoDog-UV_psd
+    second: {fileID: 2100000, guid: 4d061db624ad49e48bdc4a39a21072c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__UV
+    second: {fileID: 2100000, guid: 738e5fdd95b030045b6c9d44afefa807, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__Untitled
+    second: {fileID: 2100000, guid: e9c54e7ddaf18b642b7d364d3c8c0c33, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 10
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: metarigAction_001
+      takeName: metarigAction_001
+      firstFrame: -1
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

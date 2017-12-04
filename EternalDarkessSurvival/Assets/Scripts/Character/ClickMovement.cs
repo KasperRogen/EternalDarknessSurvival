@@ -12,6 +12,14 @@ public class ClickMovement : MonoBehaviour
 	void Start ()
 	{
 	    anim = this.GetComponent<Animator>();
+
+
+	    foreach (Transform child in transform)
+	    {
+	        if (child.GetComponent<Animator>() != null)
+	            anim = child.GetComponent<Animator>();
+	    }
+
 		  _agent = GetComponent<NavMeshAgent>();
 	}
 	

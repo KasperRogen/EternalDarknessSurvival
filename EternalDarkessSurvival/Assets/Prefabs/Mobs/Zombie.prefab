@@ -318,6 +318,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seeDistance: 10
+  MobSpawner: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!114 &114501718752190760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -342,7 +344,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb274f91a6a9a4341aca9f411bdf99f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackCooldown: 0.3
+  BloodParticles: {fileID: 198470322093320816, guid: 8a75f7f7a1db5354c99d87e94d0ff09e,
+    type: 2}
+  AttackCooldown: 1
 --- !u!135 &135533552294781982
 SphereCollider:
   m_ObjectHideFlags: 1

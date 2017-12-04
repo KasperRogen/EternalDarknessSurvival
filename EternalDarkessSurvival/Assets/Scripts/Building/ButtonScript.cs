@@ -15,6 +15,8 @@ public class ButtonScript : MonoBehaviour
 
     void TaskOnClick()
     {
+        
+
         BMS.UpdateMenu(message);
     }
 }
