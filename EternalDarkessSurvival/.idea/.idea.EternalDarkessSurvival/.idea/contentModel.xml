@@ -6,6 +6,9 @@
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Combatable.cs" t="Include" />
+        <e p="EntityStats.cs" t="Include" />
+        <e p="InputManager.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Editor" t="Include">
             <e p="JetBrains" t="Include">
@@ -22,7 +25,6 @@
           </e>
           <e p="Character" t="Include">
             <e p="CameraMover.cs" t="Include" />
-            <e p="CharacterMovement.cs" t="Include" />
             <e p="ClickMovement.cs" t="Include" />
           </e>
           <e p="Gathering" t="Include">
@@ -35,17 +37,24 @@
           <e p="Inventory" t="Include">
             <e p="Character" t="Include">
               <e p="Inventory.cs" t="Include" />
+              <e p="InventoryUIManager.cs" t="Include" />
             </e>
             <e p="CostumInventoryDragger.cs" t="Include" />
-            <e p="InventoryUIManager.cs" t="Include" />
             <e p="Item.cs" t="Include" />
             <e p="ItemHolder.cs" t="Include" />
             <e p="ItemInfo.cs" t="Include" />
+            <e p="ToolItem.cs" t="Include" />
           </e>
           <e p="Mobs" t="Include">
             <e p="MobMovementScript.cs" t="Include" />
           </e>
           <e p="PublicEnums.cs" t="Include" />
+          <e p="Tools" t="Include">
+            <e p="Character" t="Include">
+              <e p="ToolManager.cs" t="Include" />
+            </e>
+            <e p="Tool.cs" t="Include" />
+          </e>
           <e p="World" t="Include">
             <e p="GenerateTerrainFromNoise.cs" t="Include" />
             <e p="MapGenerator.cs" t="Include" />

@@ -95,132 +95,137 @@ public class BuildingManager : MonoBehaviour
     }
 
     public void Build(GameObject Buildable)
-    {
+        {
 
-       
+
             _buildable.GetComponent<NavMeshObstacle>().enabled = true;
             StartCoroutine(BuildObject(Buildable));
 
-    }
-
-
-
-    IEnumerator BuildObject(GameObject Buildable)
-    {
-        yield return new WaitForEndOfFrame();
-        yield return new WaitForEndOfFrame();
-        if (CalculateNewPath() && ColliderCheck())
-        {
-            int woodCount = 0;
-            int stoneCount = 0;
-
-            if (Player.GetComponent<Inventory>().Items.Any(i => i.ItemType == PublicEnums.ItemType.Wood))
-            {
-                woodCount = Player.GetComponent<Inventory>().Items.Where(i => i.ItemType == PublicEnums.ItemType.Wood)
-                    .Sum(i => i.Quantity);
-            }
-
-            if (Player.GetComponent<Inventory>().Items.Any(i => i.ItemType == PublicEnums.ItemType.Stone))
-            {
-                stoneCount = Player.GetComponent<Inventory>().Items.Where(i => i.ItemType == PublicEnums.ItemType.Stone)
-                    .Sum(i => i.Quantity);
-            }
-
-            if (stoneCount >= Buildable.GetComponent<DeployableStats>().StonePrice &&
-                woodCount >= Buildable.GetComponent<DeployableStats>().WoodPrice)
-            {
-                PlaceBuildable(_buildable);
-                _buildable = Instantiate(Buildable, Vector3.zero, Quaternion.identity);
-                InitBuildable(_buildable);
-
-                if (Buildable.GetComponent<DeployableStats>().WoodPrice > 0)
-                    Player.GetComponent<Inventory>().DecrementResource(PublicEnums.ItemType.Wood, Buildable.GetComponent<DeployableStats>().WoodPrice);
-
-                if (Buildable.GetComponent<DeployableStats>().StonePrice > 0)
-                    Player.GetComponent<Inventory>().DecrementResource(PublicEnums.ItemType.Stone, Buildable.GetComponent<DeployableStats>().StonePrice);
-            }
-
-            //Buildable.GetComponent<DeployableStats>()
         }
 
-        if (_buildable.GetComponent<NavMeshObstacle>() != null)
-            _buildable.GetComponent<NavMeshObstacle>().enabled = false;
-    }
 
 
-
-    bool CalculateNewPath()
-    {
-        Player.GetComponent<NavMeshAgent>().CalculatePath(NavPathCheckerTarget.transform.position, NavMeshPath);
-        print("New path calculated");
-        if (NavMeshPath.status != NavMeshPathStatus.PathComplete)
+        IEnumerator BuildObject(GameObject Buildable)
         {
-            return false;
+            yield return new WaitForEndOfFrame();
+            yield return new WaitForEndOfFrame();
+            if (CalculateNewPath() && ColliderCheck())
+            {
+                int woodCount = 0;
+                int stoneCount = 0;
+
+                if (Player.GetComponent<Inventory>().Items.Any(i => i.ItemType == PublicEnums.ItemType.Wood))
+                {
+                    woodCount = Player.GetComponent<Inventory>().Items
+                        .Where(i => i.ItemType == PublicEnums.ItemType.Wood)
+                        .Sum(i => i.Quantity);
+                }
+
+                if (Player.GetComponent<Inventory>().Items.Any(i => i.ItemType == PublicEnums.ItemType.Stone))
+                {
+                    stoneCount = Player.GetComponent<Inventory>().Items
+                        .Where(i => i.ItemType == PublicEnums.ItemType.Stone)
+                        .Sum(i => i.Quantity);
+                }
+
+                if (stoneCount >= Buildable.GetComponent<DeployableStats>().StonePrice &&
+                    woodCount >= Buildable.GetComponent<DeployableStats>().WoodPrice)
+                {
+                    PlaceBuildable(_buildable);
+                    _buildable = Instantiate(Buildable, Vector3.zero, Quaternion.identity);
+                    InitBuildable(_buildable);
+
+                    if (Buildable.GetComponent<DeployableStats>().WoodPrice > 0)
+                        Player.GetComponent<Inventory>().DecrementResource(PublicEnums.ItemType.Wood,
+                            Buildable.GetComponent<DeployableStats>().WoodPrice);
+
+                    if (Buildable.GetComponent<DeployableStats>().StonePrice > 0)
+                        Player.GetComponent<Inventory>().DecrementResource(PublicEnums.ItemType.Stone,
+                            Buildable.GetComponent<DeployableStats>().StonePrice);
+                }
+
+                //Buildable.GetComponent<DeployableStats>()
+            }
+
+            if (_buildable.GetComponent<NavMeshObstacle>() != null)
+                _buildable.GetComponent<NavMeshObstacle>().enabled = false;
         }
-        else
+
+
+
+        bool CalculateNewPath()
         {
+            Player.GetComponent<NavMeshAgent>().CalculatePath(NavPathCheckerTarget.transform.position, NavMeshPath);
+            print("New path calculated");
+            if (NavMeshPath.status != NavMeshPathStatus.PathComplete)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+
+
+        bool ColliderCheck()
+        {
+
+            float colliderSize = _buildable.transform.localScale.x;
+
+            for (int i = 0; i < 3; i++)
+            {
+                if (_buildable.transform.localScale[i] > colliderSize)
+                    colliderSize = _buildable.transform.localScale[i];
+            }
+
+            colliderSize *= 0.5f;
+
+
+            RaycastHit[] sphereHit;
+            sphereHit = Physics.SphereCastAll(_buildable.transform.position, colliderSize, Vector3.down);
+            foreach (RaycastHit raycastHit in sphereHit)
+            {
+                if (_buildable.gameObject.GetComponent<Collider>().bounds
+                    .Intersects(raycastHit.transform.gameObject.GetComponent<Collider>().bounds))
+                    if (raycastHit.transform.gameObject.tag != "Floor" &&
+                        raycastHit.transform.gameObject.tag != "Terrain")
+                    {
+                        CollidingObjects.Add(raycastHit.transform.gameObject);
+//                    Debug.Log(raycastHit.transform.gameObject.tag);
+                        _buildable.GetComponent<Renderer>().material.color = new Color(1f, 0.07f, 0f, 0.49f);
+                        return false;
+                    }
+            }
+            _buildable.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 0.3f);
             return true;
         }
-    }
 
 
-
-    bool ColliderCheck()
-    {
-
-        float colliderSize = _buildable.transform.localScale.x;
-
-        for (int i = 0; i < 3; i++)
+        void InitBuildable(GameObject GO)
         {
-            if (_buildable.transform.localScale[i] > colliderSize)
-                colliderSize = _buildable.transform.localScale[i];
+            GO.GetComponent<Renderer>().material = TransparentMaterial;
+
+            if (GO.GetComponent<NavMeshObstacle>() != null)
+                GO.GetComponent<NavMeshObstacle>().enabled = false;
+            GO.GetComponent<Collider>().isTrigger = true;
+            GO.AddComponent<Rigidbody>();
+            GO.GetComponent<Rigidbody>().useGravity = false;
+            GO.layer = 2;
         }
 
-        colliderSize *= 0.5f;
 
-
-        RaycastHit[] sphereHit;
-        sphereHit = Physics.SphereCastAll(_buildable.transform.position, colliderSize, Vector3.down);
-        foreach (RaycastHit raycastHit in sphereHit)
+        void PlaceBuildable(GameObject GO)
         {
-            if (_buildable.gameObject.GetComponent<Collider>().bounds.Intersects(raycastHit.transform.gameObject.GetComponent<Collider>().bounds))
-                if (raycastHit.transform.gameObject.tag != "Floor" &&
-                    raycastHit.transform.gameObject.tag != "Terrain")
-                {
-                    CollidingObjects.Add(raycastHit.transform.gameObject);
-//                    Debug.Log(raycastHit.transform.gameObject.tag);
-                    _buildable.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 0.3f);
-                    return false;
-                }
+            GO.GetComponent<Renderer>().material = _objectMat;
+            GO.GetComponent<Collider>().isTrigger = false;
+            if (GO.GetComponent<NavMeshObstacle>() != null)
+                GO.GetComponent<NavMeshObstacle>().enabled = true;
+            Destroy(GO.GetComponent<Rigidbody>());
+            GO.layer = 9;
         }
-        _buildable.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 0.3f);
-        return true;
+
+
     }
 
-
-    void InitBuildable(GameObject GO)
-    {
-        GO.GetComponent<Renderer>().material = TransparentMaterial;
-
-        if (GO.GetComponent<NavMeshObstacle>() != null)
-            GO.GetComponent<NavMeshObstacle>().enabled = false;
-        GO.GetComponent<Collider>().isTrigger = true;
-        GO.AddComponent<Rigidbody>();
-        GO.GetComponent<Rigidbody>().useGravity = false;
-        GO.layer = 2;
-    }
-
-
-    void PlaceBuildable(GameObject GO)
-    {
-        GO.GetComponent<Renderer>().material = _objectMat;
-        GO.GetComponent<Collider>().isTrigger = false;
-        if (GO.GetComponent<NavMeshObstacle>() != null)
-            GO.GetComponent<NavMeshObstacle>().enabled = true;
-        Destroy(GO.GetComponent<Rigidbody>());
-        GO.layer = 9;
-    }
-
-
-
-	}
