@@ -342,6 +342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb274f91a6a9a4341aca9f411bdf99f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BloodParticles: {fileID: 198470322093320816, guid: 8a75f7f7a1db5354c99d87e94d0ff09e,
+    type: 2}
   AttackCooldown: 0.3
 --- !u!135 &135533552294781982
 SphereCollider:

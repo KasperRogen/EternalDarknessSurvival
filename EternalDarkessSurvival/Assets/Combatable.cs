@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Combatable : MonoBehaviour
 {
-
+    public ParticleSystem BloodParticles;
     private float _lastAttack;
     public float AttackCooldown;
 
@@ -22,6 +22,7 @@ public class Combatable : MonoBehaviour
     public void GetAttacked(GameObject Attacker, float damage)
     {
         stats.Health -= damage;
+        Instantiate(BloodParticles, transform.position, Quaternion.identity);
         if(stats.Health <= 0)
             Destroy(gameObject);
     }

@@ -45,7 +45,7 @@ public class InputManager : MonoBehaviour
 	            }
 	            else if (hit.transform.gameObject.GetComponent<Gatherable>() != null)
 	            {
-	                hit.transform.gameObject.GetComponent<Gatherable>().Gather(_stats.Damage, gameObject);
+	                hit.transform.gameObject.GetComponent<Gatherable>().Gather(this._stats.Damage, gameObject);
 	            }
 	        }
 
