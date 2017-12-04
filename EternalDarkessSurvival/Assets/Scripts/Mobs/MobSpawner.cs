@@ -45,11 +45,13 @@ public class MobSpawner : MonoBehaviour
 
                         GameObject mob = Instantiate(Mobs[Random.Range(0, Mobs.Length)], spawnPos, Quaternion.identity);
                         mob.GetComponent<MobMovementScript>().MobSpawner = this;
+                        mob.GetComponent<MobMovementScript>().Player = GameObject.FindGameObjectWithTag("Player");
 
                     } else if (OnSpawnMobs.GetInvocationList().Length < MaxMobs)
                     {
                         GameObject mob = Instantiate(Mobs[Random.Range(0, Mobs.Length)], spawnPos, Quaternion.identity);
                         mob.GetComponent<MobMovementScript>().MobSpawner = this;
+                        mob.GetComponent<MobMovementScript>().Player = GameObject.FindGameObjectWithTag("Player");
                     }
                 }
             }

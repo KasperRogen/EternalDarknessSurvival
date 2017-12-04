@@ -10,7 +10,7 @@ public class BuildingManager : MonoBehaviour
 {
     //Call Build with the selected object as parameter. Should be called in update continually as long as the player is building.
     //Returns false every time the player hasn't built anything, and true when the player has built, to make it easier to remove the 
-    //Resources from the players inventory.
+    //Resources from the players inventor
     public Material TransparentMaterial;
     private Material _objectMat;
     private int _rotation = 0;
@@ -43,6 +43,7 @@ public class BuildingManager : MonoBehaviour
     {
         BuildingObject = null;
         Destroy(_buildable.transform.gameObject);
+        IsBuilding = false;
         _firstRun = true;
     }
 
@@ -77,16 +78,16 @@ public class BuildingManager : MonoBehaviour
 
 
 
+            _buildable.transform.Rotate(Vector3.up, Input.GetAxis("Mouse ScrollWheel") * 10);
 
 
 
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                if (_buildable.GetComponent<NavMeshObstacle>() != null)
-                    _buildable.GetComponent<NavMeshObstacle>().enabled = true;
-                StartCoroutine(BuildObject(BuildingObject));
-            }
+            //if (Input.GetMouseButtonDown(0))
+            //{
+            //    if (_buildable.GetComponent<NavMeshObstacle>() != null)
+            //        _buildable.GetComponent<NavMeshObstacle>().enabled = true;
+            //    StartCoroutine(BuildObject(BuildingObject));
+            //}
         }
     }
 

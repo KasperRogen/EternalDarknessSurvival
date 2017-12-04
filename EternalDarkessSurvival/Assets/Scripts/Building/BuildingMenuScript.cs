@@ -16,14 +16,17 @@ public class BuildingMenuScript : MonoBehaviour {
 
 	    float YIndex = 1;
 
-	    foreach (CustomButton customButton in buttons)
+	    Vector3 positionvector = ButtonTemplate.GetComponent<RectTransform>().position;
+        foreach (CustomButton customButton in buttons)
 	    {
-	        Vector3 positionvector = ButtonTemplate.GetComponent<RectTransform>().position;
+
 	        positionvector.y -= ButtonTemplate.GetComponent<RectTransform>().rect.height;
+
 
 	        GameObject button = Instantiate(ButtonTemplate,
 	            GameObject.Find("BuildingMenuCanvas").transform.GetChild(0).transform, false);
 
+	        button.transform.GetChild(0).GetComponent<Text>().text = customButton.Name;
 	        button.transform.position = positionvector;
 
             float _childYIndex = 0;
@@ -118,6 +121,8 @@ public class BuildingMenuScript : MonoBehaviour {
             GetComponent<BuildingManager>().BuildingObject = button.ToPlace;
         }
         
+
+
     }
 
 
