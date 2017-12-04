@@ -86,7 +86,7 @@ public class GenerateTerrainFromNoise : MonoBehaviour
                     {
                         if (GatherTypes.Any(it => it.TerrainType == TypeToSet))
                         {
-                            Instantiate(GatherTypes.First(it => it.TerrainType == TypeToSet), new Vector3(ToNoise.x, 2, ToNoise.y), rot);
+                            Instantiate(GatherTypes.First(it => it.TerrainType == TypeToSet), new Vector3(ToNoise.x, 0, ToNoise.y), rot, StoneParent.transform);
                         }
                     }
 
@@ -113,7 +113,7 @@ public class GenerateTerrainFromNoise : MonoBehaviour
 	                {
 		                if (GatherTypes.Any(it => it.TerrainType == type))
 		                {
-			                Instantiate(GatherTypes.First(it => it.TerrainType == type), new Vector3(x, 2, z), rot, TreeParent.transform);
+			                Instantiate(GatherTypes.First(it => it.TerrainType == type), new Vector3(x, 0, z), rot, TreeParent.transform);
 		                }
 	                }
 	                
