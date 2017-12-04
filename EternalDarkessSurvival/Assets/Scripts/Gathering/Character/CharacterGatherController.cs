@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class CharacterGatherController : MonoBehaviour
@@ -8,8 +9,19 @@ public class CharacterGatherController : MonoBehaviour
     public ParticleSystem StoneParticleSystem;
     public ParticleSystem WoodParticleSystem;
 
+	private EntityStats EntityStats;
+	private ToolManager ToolManager;
+	public GenerateTerrainFromNoise TerrainManager;
+	
     public float MiningDistance = 2.5f;
 
+	void Start()
+	{
+		EntityStats = GetComponent<EntityStats>();
+		ToolManager = GetComponent<ToolManager>();
+		
+	}
+	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown(0))
@@ -39,7 +51,6 @@ public class CharacterGatherController : MonoBehaviour
 				        Instantiate(StoneParticleSystem, rayHit.point, Quaternion.identity);
 				    else if (gatherObject.resourceType == PublicEnums.ItemType.Wood)
 				        Instantiate(WoodParticleSystem, rayHit.point, Quaternion.identity);
-                    gatherObject.Gather(9, gameObject);
 				}
 			}
 		}

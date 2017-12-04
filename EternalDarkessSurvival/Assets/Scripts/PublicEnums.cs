@@ -23,4 +23,11 @@ public static class PublicEnums {
         Gather,
         Weapoin
     }
+
+    public enum ToolGatherType
+    {
+        None,
+        Stone,
+        Wood
+    }
 }

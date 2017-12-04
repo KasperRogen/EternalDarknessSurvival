@@ -52,7 +52,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemType: 1
+  DropPrefab: {fileID: 0}
   Sprite: {fileID: 21300000, guid: d5480a4baa8a84de08bb5db0a4318de8, type: 3}
   Name: Wood
-  Quantity: 20
+  Quantity: 0
   MaxQuantity: 20

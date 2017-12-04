@@ -37,17 +37,24 @@
           <e p="Inventory" t="Include">
             <e p="Character" t="Include">
               <e p="Inventory.cs" t="Include" />
+              <e p="InventoryUIManager.cs" t="Include" />
             </e>
             <e p="CostumInventoryDragger.cs" t="Include" />
-            <e p="InventoryUIManager.cs" t="Include" />
             <e p="Item.cs" t="Include" />
             <e p="ItemHolder.cs" t="Include" />
             <e p="ItemInfo.cs" t="Include" />
+            <e p="ToolItem.cs" t="Include" />
           </e>
           <e p="Mobs" t="Include">
             <e p="MobMovementScript.cs" t="Include" />
           </e>
           <e p="PublicEnums.cs" t="Include" />
+          <e p="Tools" t="Include">
+            <e p="Character" t="Include">
+              <e p="ToolManager.cs" t="Include" />
+            </e>
+            <e p="Tool.cs" t="Include" />
+          </e>
           <e p="World" t="Include">
             <e p="GenerateTerrainFromNoise.cs" t="Include" />
             <e p="MapGenerator.cs" t="Include" />

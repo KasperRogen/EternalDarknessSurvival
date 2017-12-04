@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 33153229365534178}
   - component: {fileID: 65279124939461012}
   - component: {fileID: 23341659826614670}
-  - component: {fileID: 114320396161222140}
   - component: {fileID: 114319240101373610}
   - component: {fileID: 54348117708720318}
+  - component: {fileID: 114687474953686960}
   m_Layer: 8
   m_Name: GatherDrop
   m_TagString: Untagged
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3d2767b9ca3b48dda60877aa79bc5dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114320396161222140
+--- !u!114 &114687474953686960
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -132,8 +132,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1646572312613766}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e916be78f1e5442e4b11ae3ea215d3df, type: 3}
+  m_Script: {fileID: 11500000, guid: a72f66fc8d5624cb8ac3fe7e8c6fedd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceCount: 10
-  resourceType: 0
+  ItemType: 0
+  DropPrefab: {fileID: 1646572312613766}
+  Sprite: {fileID: 21300000, guid: 8a6829a47f4a346d0b2a2a1e79c32983, type: 3}
+  Name: Stone
+  Quantity: 20
+  MaxQuantity: 20
