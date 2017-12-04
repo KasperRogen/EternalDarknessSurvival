@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4805759819622646}
   - component: {fileID: 33939738267153382}
   - component: {fileID: 23859929914781082}
-  - component: {fileID: 64061621759992860}
-  - component: {fileID: 208185315104004498}
   - component: {fileID: 114506150088361164}
+  - component: {fileID: 65452435300781410}
+  - component: {fileID: 208869857648102278}
   m_Layer: 0
   m_Name: Rocks2-joined
   m_TagString: Untagged
@@ -85,8 +85,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1180345256288486}
   m_Mesh: {fileID: 4300000, guid: 3097ed9b3abf749f48c8b2c7311e4853, type: 3}
---- !u!64 &64061621759992860
-MeshCollider:
+--- !u!65 &65452435300781410
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -95,10 +95,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 3097ed9b3abf749f48c8b2c7311e4853, type: 3}
+  m_Size: {x: 0.019669853, y: 0.020465437, z: 0.010453608}
+  m_Center: {x: 0.00082069077, y: 0.0013784741, z: 0.0017995501}
 --- !u!114 &114506150088361164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,7 +122,7 @@ NavMeshObstacle:
   m_Shape: 1
   m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.0050000004}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.001, y: 0.001, z: 0.002}
   m_TimeToStationary: 0.5

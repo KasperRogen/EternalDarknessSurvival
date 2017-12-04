@@ -9,10 +9,19 @@ public class Inventory : MonoBehaviour {
 
 	public GameObject DropPrefab;
 
+	private ToolManager ToolManager;
+
+	public List<ToolItem> ToolList;
+
+	void Start()
+	{
+		ToolManager = GetComponent<ToolManager>();
+	}
+	
 	public Inventory(){
 		Items = new List<Item>(15);
 	}
-
+	
 	// Add new items to inventory
 	public void AddNewItem(Item item){
 		if(Items.Count < Items.Capacity){
@@ -40,9 +49,10 @@ public class Inventory : MonoBehaviour {
 		}
     }
 
-
+	
 
 	// Remove items from inventory
+	
 	public void RemoveItem(Item removeItem){
 		if(Items.Any() && removeItem != null){
 		foreach(Item item in Items){
@@ -56,13 +66,28 @@ public class Inventory : MonoBehaviour {
 			
 	}
 
+	public void DropToolItem(ToolItem item)
+	{
+		GameObject instit = Instantiate(item.DropPrefab, transform.position + Vector3.forward, transform.rotation);
+		instit.GetComponent<ToolItem>().Quantity = item.Quantity;
+		instit.GetComponent<ToolItem>().Tool = item.Tool;
+	}
+	
+	
 	// Drop Item if inv is full
 	public void DropItem(Item item){
-		DropPrefab.GetComponent<Gatherable>().resourceCount = item.Quantity;
-		DropPrefab.GetComponent<Gatherable>().resourceType = item.ItemType;
-		Instantiate(DropPrefab, transform.position + Vector3.forward, transform.rotation);
+		GameObject instit = Instantiate(item.DropPrefab, transform.position + Vector3.forward, transform.rotation);
+		instit.GetComponent<Item>().Quantity = item.Quantity;
 	}
 
+	public void AddToolItem(ToolItem item)
+	{
+		ToolItem itemToAdd = ToolList.First(t => t.Tool.GatherType == item.Tool.GatherType);
+		itemToAdd.Quantity = item.Quantity;
+		itemToAdd.Tool = item.Tool;
+		Items.Add(itemToAdd);
+	}
+	
 	// Add ResourceItems
 	public void AddResourceItem(int quantity, PublicEnums.ItemType resourceType){
 		// See if any items (That isn't full) of same type already exists => Add to this and return

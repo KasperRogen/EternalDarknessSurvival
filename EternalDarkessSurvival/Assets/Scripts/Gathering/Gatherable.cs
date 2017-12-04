@@ -9,15 +9,15 @@ public class Gatherable : MonoBehaviour
 	public PublicEnums.ItemType resourceType;
 	public PublicEnums.TerrainType TerrainType;
 
-	public void Gather(float damage, GameObject player)
+	public void Gather(GameObject player)
 	{
-		int resourceGained = (int) damage;
+		int resourceGained = player.GetComponent<EntityStats>().GatherDamage;
 
-		if(resourceCount - damage < 0){
+		if(resourceCount - resourceGained < 0){
 			resourceGained = (int)resourceCount;
 		}
 		
-		resourceCount -= damage;
+		resourceCount -= resourceGained;
 
 		player.transform.GetComponent<Inventory>().AddResourceItem(resourceGained, resourceType);
 		

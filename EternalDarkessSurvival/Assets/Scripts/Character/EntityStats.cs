@@ -5,7 +5,8 @@ using UnityEngine;
 public class EntityStats : MonoBehaviour
 {
 
-    public float Health;
-    public float Damage;
+    public float Health = 100;
+    public float Damage = 5;
+    public int GatherDamage = 3;
 
 }
