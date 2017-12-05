@@ -9,7 +9,7 @@ public class InputManager : MonoBehaviour
     private EntityStats _stats;
     private BuildingManager _buildingManager;
     public Canvas BuildingMenuCanvas;
-
+    private Transform target;
 
 	// Use this for initialization
 	void Start ()
@@ -37,13 +37,17 @@ public class InputManager : MonoBehaviour
 	        {
                 Debug.Log(hit.transform.name);
 
-	            if (hit.transform.gameObject.GetComponent<Combatable>() != null && (transform.position - hit.transform.position).magnitude < 1.5f)
+	            if (hit.transform.gameObject.GetComponent<Combatable>() != null && (transform.position - hit.transform.position).magnitude < GetComponent<EntityStats>().range && _stats.ReadyToSwing())
 	            {
-	                _combat.Attack(hit.transform.gameObject);
+	                GameObject.FindGameObjectWithTag("PlayerModel").GetComponent<Animator>().speed = 2;
+	                GameObject.FindGameObjectWithTag("PlayerModel").GetComponent<Animator>().SetTrigger("Swing");
+	                StartCoroutine(RotateTo(hit.transform.gameObject, hit.point));
 	            }
-	            else if (hit.transform.gameObject.GetComponent<Gatherable>() != null)
+	            else if (hit.transform.gameObject.GetComponent<Gatherable>() != null && (transform.position - hit.transform.position).magnitude < GetComponent<EntityStats>().range && _stats.ReadyToSwing())
 	            {
-	                hit.transform.gameObject.GetComponent<Gatherable>().Gather(gameObject);
+	                GameObject.FindGameObjectWithTag("PlayerModel").GetComponent<Animator>().speed = 2;
+	                GameObject.FindGameObjectWithTag("PlayerModel").GetComponent<Animator>().SetTrigger("Swing");
+                    StartCoroutine(RotateTo(hit.transform.gameObject, hit.point));
 	            }
 	        }
 
@@ -55,8 +59,62 @@ public class InputManager : MonoBehaviour
 	            _buildingManager.StopBuild();
 	            return;
 	        }
+	        else
+	        {
+	            GetComponent<ClickMovement>().Move();
+	        }
         }
 
+
+	    if (Input.GetMouseButton(1))
+	    {
+	        GetComponent<ClickMovement>().Move();
+        }
+        
 	}
+
+
+
+    IEnumerator RotateTo(GameObject target, Vector3 point) {
+        for(int i = 0; i < 20; i++) {
+            GameObject.FindGameObjectWithTag("PlayerModel").GetComponent<Animator>().speed = 3;
+            var targetRotation = Quaternion.LookRotation(target.transform.position - transform.position);
+
+            // Smoothly rotate towards the target point.
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5 * Time.deltaTime);
+            yield return new WaitForEndOfFrame();
+        }
+
+
+        if(target.GetComponent<Gatherable>() != null) { 
+
+        GetComponent<CharacterGatherController>().GatherResource();
+
+            if(target.GetComponent<Gatherable>() != null) { 
+                Gatherable gatherObject = target.GetComponent<Gatherable>();
+
+                if (gatherObject != null)
+                {
+                    // Gatherable object found and clicked on! Do shit.
+                    if (gatherObject.resourceType == PublicEnums.ItemType.Stone)
+                        Instantiate(GetComponent<CharacterGatherController>().StoneParticleSystem, point, Quaternion.identity);
+                    else if (gatherObject.resourceType == PublicEnums.ItemType.Wood)
+                        Instantiate(GetComponent<CharacterGatherController>().WoodParticleSystem, point, Quaternion.identity);
+                }
+            }
+
+            target.GetComponent<Gatherable>().Gather(gameObject);
+
+        } else if (target.GetComponent<Combatable>() != null)
+        {
+            RaycastHit hit;
+            Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit);
+            _combat.Attack(target.transform.gameObject);
+            Instantiate(GetComponent<Combatable>().BloodParticles, point, Quaternion.identity);
+        }
+
+    }
+
+    
 
 }

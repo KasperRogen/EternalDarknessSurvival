@@ -9,6 +9,7 @@ TagManager:
   - Floor
   - Terrain
   - Enemy
+  - PlayerModel
   layers:
   - Default
   - TransparentFX

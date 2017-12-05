@@ -23,19 +23,27 @@ public class MobMovementScript : MonoBehaviour
 	    _combat = GetComponent<Combatable>();
 	    _navMeshAgent = GetComponent<NavMeshAgent>();
 
-	    MobSpawner.OnSpawnMobs += DestroyThis;
+	    MobSpawner.OnSpawnMobs += DestroyByDistance;
 
 	}
 
 
 
-    void DestroyThis()
+    public void DestroyByDistance()
     {
-        if((transform.position - Player.transform.position).magnitude > 300) { 
-            Debug.Log("IM DED NAO");
+        if ((transform.position - Player.transform.position).magnitude > 300)
+        {
+            DestroyThis();
+        }
+    }
+
+
+
+
+    public void DestroyThis()
+    {
         MobSpawner.OnSpawnMobs -= DestroyThis;
         Destroy(gameObject);
-        }
     }
 
 
@@ -45,12 +53,17 @@ public class MobMovementScript : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+
+
+	    GetComponent<Animator>().speed = _navMeshAgent.velocity.magnitude / 3;
+
+
         List<GameObject> VisibleLights;
 	    GameObject player;
 
 	    if ((player = FindPlayer()) != null)
 	    {
-	        if ((player.transform.position - transform.position).magnitude > player.GetComponent<Collider>().bounds.size.x/2 + transform.gameObject.GetComponent<Collider>().bounds.size.x)
+	        if ((player.transform.position - transform.position).magnitude > _stats.range - 0.5f)
 	        {
 	            _navMeshAgent.SetDestination(player.transform.position);
 	        }

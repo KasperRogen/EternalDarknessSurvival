@@ -23,15 +23,22 @@ public class Combatable : MonoBehaviour
     {
         stats.Health -= damage;
         Instantiate(BloodParticles, transform.position, Quaternion.identity);
-        if(stats.Health <= 0)
+        if(stats.Health <= 0) {
+            if(GetComponent<MobMovementScript>() != null)
+            {
+                GetComponent<MobMovementScript>().DestroyThis();
+                return;
+            }
+
             Destroy(gameObject);
+        }
     }
 
 
 
     public void Attack(GameObject enemy)
     {
-        if ((transform.position - enemy.transform.position).magnitude < 1.5f && Time.time - _lastAttack > AttackCooldown)
+        if ((transform.position - enemy.transform.position).magnitude < stats.range && Time.time - _lastAttack > AttackCooldown)
         {
             enemy.GetComponent<Combatable>().GetAttacked(gameObject, stats.Damage);
             _lastAttack = Time.time;
