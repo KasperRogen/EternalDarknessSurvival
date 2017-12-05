@@ -37,15 +37,20 @@ public class ToolManager : MonoBehaviour
 	{
 		if (ToolList.Any(t => t.GatherType == tool.GatherType))
 		{
+			if (equippedItem != null)
+			{
+				Destroy(equippedItem.gameObject);
+			}
 			CharacterToolEquipped = ToolList.First(t => t.GatherType == tool.GatherType);
 			GameObject instTool = Instantiate(PlayerStats.gameObject.GetComponent<Inventory>().ToolList
 				.First(t => t.Tool.GatherType == tool.GatherType).DropPrefab);
 			Instantiate(PlayerStats.gameObject.GetComponent<Inventory>().ToolList
 				.First(t => t.Tool.GatherType == tool.GatherType).DropPrefab);
-
+			
 			instTool.transform.position = rightHand.transform.position;
 			instTool.gameObject.GetComponent<ProximityPicker>().enabled = false;
 			instTool.transform.SetParent(rightHand.transform);
+			instTool.transform.rotation = rightHand.transform.rotation;
 
 			equippedItem = instTool;
 		}
