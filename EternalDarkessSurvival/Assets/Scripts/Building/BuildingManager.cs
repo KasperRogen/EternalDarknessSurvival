@@ -56,6 +56,7 @@ public class BuildingManager : MonoBehaviour
             IsFree = true;
             if (_firstRun)
             {
+                Debug.Log("building: " + BuildingObject.name);
                 _objectMat = BuildingObject.GetComponent<Renderer>().sharedMaterial;
                 _buildable = Instantiate(BuildingObject, Vector3.zero, Quaternion.identity);
                 _buildable.gameObject.GetComponent<Collider>().isTrigger = true;

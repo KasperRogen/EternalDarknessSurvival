@@ -70,11 +70,13 @@
      <Compile Include="Assets\Scripts\Inventory\ItemHolder.cs" />
      <Compile Include="Assets\Scripts\Inventory\ItemInfo.cs" />
      <Compile Include="Assets\Scripts\Inventory\ToolItem.cs" />
+     <Compile Include="Assets\Scripts\LoadMainScene.cs" />
      <Compile Include="Assets\Scripts\Mobs\MobMovementScript.cs" />
      <Compile Include="Assets\Scripts\Mobs\MobSpawner.cs" />
      <Compile Include="Assets\Scripts\PublicEnums.cs" />
      <Compile Include="Assets\Scripts\publicParticles.cs" />
      <Compile Include="Assets\Scripts\Tools\Character\ToolManager.cs" />
+     <Compile Include="Assets\Scripts\Tools\LoadLoadScene.cs" />
      <Compile Include="Assets\Scripts\Tools\Tool.cs" />
      <Compile Include="Assets\Scripts\World\GenerateTerrainFromNoise.cs" />
      <Compile Include="Assets\Scripts\World\MapGenerator.cs" />

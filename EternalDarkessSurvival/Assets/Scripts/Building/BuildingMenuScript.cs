@@ -134,7 +134,7 @@ public class BuildingMenuScript : MonoBehaviour {
         if (button.ToPlace != null)
         {
             GetComponent<BuildingManager>().IsBuilding = true;
-            GetComponent<BuildingManager>().BuildingObject = button.ToCraft;
+            GetComponent<BuildingManager>().BuildingObject = button.ToPlace;
         }
 
         if (button.ToCraft != null && button.Name == "Pickaxe" || button.Name == "Axe" || button.Name == "Sword")
