@@ -98,7 +98,7 @@ public class BuildingManager : MonoBehaviour
     public void Build(GameObject Buildable)
         {
 
-
+            if (_buildable.GetComponent<NavMeshObstacle>() != null)
             _buildable.GetComponent<NavMeshObstacle>().enabled = true;
             StartCoroutine(BuildObject(Buildable));
 

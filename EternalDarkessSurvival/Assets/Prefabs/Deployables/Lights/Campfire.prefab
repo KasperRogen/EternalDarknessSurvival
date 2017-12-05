@@ -74,6 +74,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4197871593589254}
   - component: {fileID: 208766822066288570}
+  - component: {fileID: 114766964721850194}
   m_Layer: 0
   m_Name: Campfire
   m_TagString: Untagged
@@ -173,7 +174,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1906383967062746}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0.034, y: 0.188, z: 0.00999999}
+  m_LocalPosition: {x: 0.034, y: 1.888, z: 0.00999999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4197871593589254}
@@ -537,8 +538,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.78676474, g: 0.43950307, b: 0, a: 1}
-  m_Intensity: 2
-  m_Range: 7.4
+  m_Intensity: 3.92
+  m_Range: 65
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -558,11 +559,24 @@ Light:
     m_Bits: 4294967295
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 13.1
+  m_BounceIntensity: 24.5
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114766964721850194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1466240038342214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4580033cc841c34fa2ae23520fffab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WoodPrice: 50
+  StonePrice: 0
 --- !u!135 &135294043332804122
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -10,6 +10,7 @@ public class InputManager : MonoBehaviour
     private BuildingManager _buildingManager;
     public Canvas BuildingMenuCanvas;
     private Transform target;
+    private AudioSource _audioSource;
 
 	// Use this for initialization
 	void Start ()
