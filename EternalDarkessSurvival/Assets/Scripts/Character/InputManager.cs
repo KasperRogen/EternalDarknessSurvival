@@ -101,6 +101,8 @@ public class InputManager : MonoBehaviour
                         Instantiate(GetComponent<CharacterGatherController>().StoneParticleSystem, point, Quaternion.identity);
                     else if (gatherObject.resourceType == PublicEnums.ItemType.Wood)
                         Instantiate(GetComponent<CharacterGatherController>().WoodParticleSystem, point, Quaternion.identity);
+                    if(gatherObject.GetComponent<AudioSource>() != null)
+                        gatherObject.GetComponent<AudioSource>().Play();
                 }
             }
 
@@ -112,6 +114,8 @@ public class InputManager : MonoBehaviour
             Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit);
             _combat.Attack(target.transform.gameObject);
             Instantiate(GetComponent<Combatable>().BloodParticles, point, Quaternion.identity);
+            if (target.GetComponent<AudioSource>() != null)
+                target.GetComponent<AudioSource>().Play();
         }
 
     }
