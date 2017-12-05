@@ -37,13 +37,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1358970216348520}
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.63749117, y: 0, z: 0, w: 0.7704577}
   m_LocalPosition: {x: 0, y: 0.76258516, z: 0}
-  m_LocalScale: {x: 26.600752, y: 26.600752, z: 92.71827}
+  m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 79.21, y: 0, z: 0}
 --- !u!23 &23007441848419546
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -84,7 +84,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1358970216348520}
-  m_Mesh: {fileID: 4300000, guid: 91a0774bfc4664b018b12077667a6cc0, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 42ea3b065f68b47b98995f0b73820896, type: 3}
 --- !u!64 &64940012833229398
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemType: 1
   DropPrefab: {fileID: 1358970216348520}
-  Sprite: {fileID: 21300000, guid: d5480a4baa8a84de08bb5db0a4318de8, type: 3}
+  Sprite: {fileID: 21300000, guid: 6db2b23d6c59c4792b5dcfba834fa33c, type: 3}
   Name: Wood
   Quantity: 0
   MaxQuantity: 20

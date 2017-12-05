@@ -9,46 +9,44 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1955578267713050}
+  m_RootGameObject: {fileID: 1861020430239822}
   m_IsPrefabParent: 1
---- !u!1 &1955578267713050
+--- !u!1 &1861020430239822
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4586789317686074}
-  - component: {fileID: 33833996626954098}
-  - component: {fileID: 23331417364459160}
-  - component: {fileID: 114907754938820062}
-  - component: {fileID: 114095784492694548}
+  - component: {fileID: 4903706125748630}
+  - component: {fileID: 33501282448275272}
+  - component: {fileID: 23169109512629568}
   m_Layer: 0
-  m_Name: dropAxe
+  m_Name: axeJoined
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4586789317686074
+--- !u!4 &4903706125748630
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1955578267713050}
+  m_GameObject: {fileID: 1861020430239822}
   m_LocalRotation: {x: 0.43876195, y: -0.54589397, z: -0.40986872, w: -0.58437616}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.165, y: 1.074, z: 7.563}
   m_LocalScale: {x: 12, y: 7, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -73.8, y: -273.9, z: 0}
---- !u!23 &23331417364459160
+--- !u!23 &23169109512629568
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1955578267713050}
+  m_GameObject: {fileID: 1861020430239822}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -78,39 +76,10 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33833996626954098
+--- !u!33 &33501282448275272
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1955578267713050}
+  m_GameObject: {fileID: 1861020430239822}
   m_Mesh: {fileID: 4300000, guid: 36cde6bbc8595465d978cc7e7eea9f7a, type: 3}
---- !u!114 &114095784492694548
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1955578267713050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3d2767b9ca3b48dda60877aa79bc5dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114907754938820062
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1955578267713050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b61e2572358c642c38baa9b222922b88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemType: 0
-  DropPrefab: {fileID: 1955578267713050}
-  Sprite: {fileID: 21300000, guid: bc61ef45c23054cc78c0db64aac8acf2, type: 3}
-  Name: Axe
-  Quantity: 0
-  MaxQuantity: 1
-  Tool: {fileID: 114828384514982968, guid: b15d185bb63fa4f43999192d27febf34, type: 2}

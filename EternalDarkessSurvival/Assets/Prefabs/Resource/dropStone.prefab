@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemType: 0
   DropPrefab: {fileID: 1308060249161970}
-  Sprite: {fileID: 21300000, guid: 8a6829a47f4a346d0b2a2a1e79c32983, type: 3}
+  Sprite: {fileID: 21300000, guid: ef1a6f0cb0cb64a0cb12a948ad44e15a, type: 3}
   Name: Stone
   Quantity: 0
   MaxQuantity: 20

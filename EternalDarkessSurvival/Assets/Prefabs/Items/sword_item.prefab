@@ -53,8 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemType: 0
-  DropPrefab: {fileID: 1728550783839610, guid: 4703107d373ad496eba4d0721a7b7578, type: 2}
-  Sprite: {fileID: 21300000, guid: cf25dc3421eb74aa8bdf46ba55286526, type: 3}
+  DropPrefab: {fileID: 1057275344178458, guid: edfb581ee67f84952a9d80a21509ee39, type: 2}
+  Sprite: {fileID: 21300000, guid: 07722f6efec8c4af5b91d0d9d8b27618, type: 3}
   Name: Sword
   Quantity: 0
   MaxQuantity: 1

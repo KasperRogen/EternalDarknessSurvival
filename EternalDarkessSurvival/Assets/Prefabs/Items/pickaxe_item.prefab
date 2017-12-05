@@ -53,10 +53,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemType: 0
-  DropPrefab: {fileID: 1795778914713244, guid: 69995e7c0ce7e4f80b14612301ef9b98, type: 2}
-  Sprite: {fileID: 21300000, guid: 7dc9a899ba08946f09147b141e5613bc, type: 3}
+  DropPrefab: {fileID: 1044114592715316, guid: 69995e7c0ce7e4f80b14612301ef9b98, type: 2}
+  Sprite: {fileID: 21300000, guid: bf202f00acbe34f6aa6b6a3b96a6e1f7, type: 3}
   Name: Pickaxe
-  Quantity: 1
+  Quantity: 200
   MaxQuantity: 1
   Tool: {fileID: 114173427859062404, guid: 8eed88b6eba7e469c8f078d284598034, type: 2}
 --- !u!114 &114296009134964392
@@ -70,5 +70,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4580033cc841c34fa2ae23520fffab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WoodPrice: 30
-  StonePrice: 40
+  WoodPrice: 15
+  StonePrice: 20

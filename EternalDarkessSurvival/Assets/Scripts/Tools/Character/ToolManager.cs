@@ -15,6 +15,9 @@ public class ToolManager : MonoBehaviour
 
 	public Image EqImage;
 
+	public GameObject rightHand;
+	public GameObject equippedItem;
+
 	void Start()
 	{
 		PlayerStats = GetComponent<EntityStats>();
@@ -35,10 +38,23 @@ public class ToolManager : MonoBehaviour
 		if (ToolList.Any(t => t.GatherType == tool.GatherType))
 		{
 			CharacterToolEquipped = ToolList.First(t => t.GatherType == tool.GatherType);
+			GameObject instTool = Instantiate(PlayerStats.gameObject.GetComponent<Inventory>().ToolList
+				.First(t => t.Tool.GatherType == tool.GatherType).DropPrefab);
+			Instantiate(PlayerStats.gameObject.GetComponent<Inventory>().ToolList
+				.First(t => t.Tool.GatherType == tool.GatherType).DropPrefab);
+
+			instTool.transform.position = rightHand.transform.position;
+			instTool.gameObject.GetComponent<ProximityPicker>().enabled = false;
+			instTool.transform.SetParent(rightHand.transform);
+
+			equippedItem = instTool;
 		}
 		else
 		{
 			CharacterToolEquipped = ToolList.First(t => t.GatherType == PublicEnums.ToolGatherType.None);
+			
+			Destroy(equippedItem.gameObject);
+			equippedItem = null;
 		}
 		UpdatePlayerStats();
 	}

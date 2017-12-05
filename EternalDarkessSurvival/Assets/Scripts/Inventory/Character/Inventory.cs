@@ -34,6 +34,7 @@ public class Inventory : MonoBehaviour {
 
     public void DecrementResource(PublicEnums.ItemType type, int quantity)
     {
+	    /*
 		Item ItemToPick = Items.Last(i => i.ItemType == type);
 		if(ItemToPick.Quantity - quantity >= 0){
 			ItemToPick.Quantity -= quantity;
@@ -46,7 +47,7 @@ public class Inventory : MonoBehaviour {
 			ItemToPick.Quantity -= ItemToPick.Quantity;
 			int newquantity = (quantity - ItemToPick.Quantity) * (-1);
 			DecrementResource(type, newquantity);
-		}
+		}*/
     }
 
 	

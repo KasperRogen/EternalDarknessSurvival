@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WoodPrice: 15
-  StonePrice: 30
+  StonePrice: 20
 --- !u!114 &114711142702739858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -66,9 +66,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemType: 1
-  DropPrefab: {fileID: 1764378955740934, guid: 4104ab64e10034c548ef70b5d7d57124, type: 2}
-  Sprite: {fileID: 21300000, guid: c4023591a1837402abae58af4532a0db, type: 3}
+  DropPrefab: {fileID: 1955578267713050, guid: 87518a3e1873d49eeb5a06aa74650b4f, type: 2}
+  Sprite: {fileID: 21300000, guid: bc61ef45c23054cc78c0db64aac8acf2, type: 3}
   Name: Axe
-  Quantity: 1
+  Quantity: 0
   MaxQuantity: 1
   Tool: {fileID: 114828384514982968, guid: b15d185bb63fa4f43999192d27febf34, type: 2}

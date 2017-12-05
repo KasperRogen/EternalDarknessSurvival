@@ -51,6 +51,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8c95b196a66344f28a293f5c051e0b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GatherType: 0
+  GatherType: 1
   GatherDamage: 2
   Damage: 15
