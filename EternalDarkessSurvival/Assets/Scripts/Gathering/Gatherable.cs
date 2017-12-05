@@ -11,6 +11,7 @@ public class Gatherable : MonoBehaviour
 
 	public void Gather(GameObject player)
 	{
+
 		int resourceGained = player.GetComponent<EntityStats>().GatherDamage;
 
 		if(resourceCount - resourceGained < 0){

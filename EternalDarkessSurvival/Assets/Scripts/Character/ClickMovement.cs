@@ -26,25 +26,30 @@ public class ClickMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	    anim.SetFloat("speed", _agent.velocity.magnitude);
-	    anim.speed = _agent.velocity.magnitude;
-     
+        if(_agent.velocity.magnitude > 0.08f) { 
+	        anim.SetFloat("speed", _agent.velocity.magnitude);
+	        anim.speed = _agent.velocity.magnitude;
+        }
 
-        if (Input.GetMouseButtonDown(1))
-		{
-            RaycastHit hit;
-		    if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit)) {
-		        targetPos = hit.point;
-		        targetPos.y = transform.position.y;
-                _agent.SetDestination(targetPos);
-		    }
-            
-		}
-
-	    if ((transform.position - targetPos).magnitude < 1)
+        if ((transform.position - targetPos).magnitude < 1)
 	        _agent.isStopped = true;
 	    else
 	        _agent.isStopped = false;
 
+    }
+
+
+
+
+
+    public void Move()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
+        {
+            targetPos = hit.point;
+            targetPos.y = transform.position.y;
+            _agent.SetDestination(targetPos);
+        }
     }
 }

@@ -24,13 +24,13 @@ public class CharacterGatherController : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown(0))
-		{
-			GatherResource();
-		}
+		//if (Input.GetMouseButtonDown(0))
+		//{
+		//	GatherResource();
+		
 	}
 
-	void GatherResource()
+	public void GatherResource()
 	{
 		RaycastHit rayHit;
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -44,14 +44,6 @@ public class CharacterGatherController : MonoBehaviour
 				Debug.DrawLine(transform.position, rayHit.transform.position);
 				//Debug.Log(rayHit.GetType());
 				Gatherable gatherObject = rayHit.transform.GetComponent<Gatherable>();
-				if (gatherObject != null)
-				{
-					// Gatherable object found and clicked on! Do shit.
-				    if (gatherObject.resourceType == PublicEnums.ItemType.Stone)
-				        Instantiate(StoneParticleSystem, rayHit.point, Quaternion.identity);
-				    else if (gatherObject.resourceType == PublicEnums.ItemType.Wood)
-				        Instantiate(WoodParticleSystem, rayHit.point, Quaternion.identity);
-				}
 			}
 		}
 	}
