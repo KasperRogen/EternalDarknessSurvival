@@ -9,7 +9,10 @@ public class Combatable : MonoBehaviour
     public float AttackCooldown;
 
     private EntityStats stats;
-
+    public GameObject c1D;
+    public GameObject c2D;
+    public GameObject d1E;
+    
     // Use this for initialization
     void Start()
     {
@@ -17,7 +20,16 @@ public class Combatable : MonoBehaviour
         stats = GetComponent<EntityStats>();
     }
 
-
+    private void DIE()
+    {
+        if (c1D != null)
+        {
+            c1D.SetActive(false);
+        }
+        
+        c2D.SetActive(false);
+        d1E.SetActive(true);
+    }
 
     public void GetAttacked(GameObject Attacker, float damage)
     {
@@ -31,7 +43,9 @@ public class Combatable : MonoBehaviour
             }
 
             Destroy(gameObject);
+            DIE();
         }
+
     }
 
 
